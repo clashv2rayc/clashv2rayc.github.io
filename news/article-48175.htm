@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="Jackcerra Business HTML5 Template">
+    <meta name="author" content="">
+    <!-- Favicon and touch Icons -->
+    <!-- Page Title -->
+    <title>Jackcerra - Business HTML5 Template</title>
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">Gin增删改查demo</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-tomorrow-night"> </h1> <blockquote> <p>一个Gin框架的联手demo、包括增删改查等等。</p> </blockquote> <h2> <a id="1_3" rel="nofollow"></a>1.使用技术</h2> <ul> <li>Gin</li> <li>Gorm</li> <li>Mysql</li> <li>…</li> </ul> <h2> <a id="2_9" rel="nofollow"></a>2.项目结构目录</h2> <pre><code>│  postman_collection.json  // postman配置文件 │  db.sql  // 数据库表结构 │  config.yaml  // 配置文件 │  go.mod      // 包依赖配置 │  main.go    // 程序入口 ├─api │  └─v1     // api 方法 │          sys_user.go │           ├─config    // 配置文件结构体 │      config.go │       ├─core      │      config.go // 配置文件读取 │      server.go // 启动HTTP server服务 │       ├─global │  │  global.go  // 全局共享对象 │  │   │  └─response │          response.go // 公共返回结构体 │           ├─initialize │      db_table.go  // 注册数据库表 │      mysql.go  // 初始化mysql连接池 │      router.go // 初始化总路由 │       ├─middleware │      cors.go  // 跨域处理配置 │       ├─model │  │  sys_user.go  // 数据库映射结构体 │  │   │  ├─request │  │      common.go  // 公共请求参数 │  │      sys_user.go  //  用户请求参数 │  │       │  └─response │          common.go   // 公共相应参数 │          sys_user.go  //  用户相应参数 ├─router │      sys_user.go  // 用户业务路由 │       ├─service │      sys_user.go   // 用户业务处理层 │       └─utils         md5.go   // 工具类 </code></pre> <h2> <a id="3_60" rel="nofollow"></a>3.运行截图</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads/20221230/94148806e4bc9604cc0c0aa7e833ef52.jpg" alt="Gin增删改查demo"><br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/74dc8c4d880043c7af3c505c928f31ed.jpg" alt="Gin增删改查demo"></p> <h2> <a id="4_63" rel="nofollow"></a>4.开源地址</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://gitee.com/litong-zero/gin-user"  rel="nofollow">Gitee</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>下一个：<a href="/news/article-48176.htm">宠物粮食代理需要多少钱呢知乎（宠物粮食代理需要多少钱呢知乎）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-48176.htm" title="宠物粮食代理需要多少钱呢知乎（宠物粮食代理需要多少钱呢知乎）">宠物粮食代理需要多少钱呢知乎（宠物粮食代理需要多少钱呢知乎）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-29-free-ssr-subscribe.htm" title="1月29日最新ClashX订阅 | 18.9M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享">1月29日最新ClashX订阅 | 18.9M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-48175.htm" title="Gin增删改查demo">Gin增删改查demo</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
