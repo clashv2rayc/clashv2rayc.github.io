@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-56345.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>vue如何实现关闭对话框后刷新列表_vue.js</title>
+        <meta name="description" content="目录  关闭对话框后刷新列表  父窗口代码 子窗口代码  关闭打开的窗口后刷新父页面  解决办法     关闭对话框后刷新列表 有些场景需要实现用户弹窗确定后自动刷新列表，父窗口绑定fevent即可 " />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-56345.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="vue如何实现关闭对话框后刷新列表_vue.js" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/2d6ece167e0dd988cbb92a080e0d8235.webp" />
+        <meta property="og:release_date" content="2025-02-14T10:01:45" />
+    <meta property="og:updated_time" content="2025-02-14T10:01:45" />
+        <meta property="og:description" content="目录  关闭对话框后刷新列表  父窗口代码 子窗口代码  关闭打开的窗口后刷新父页面  解决办法     关闭对话框后刷新列表 有些场景需要实现用户弹窗确定后自动刷新列表，父窗口绑定fevent即可 " />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue如何实现关闭对话框后刷新列表_vue.js">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">vue如何实现关闭对话框后刷新列表_vue.js</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">关闭对话框后刷新列表</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_0_0" rel="nofollow">父窗口代码</a></li> <li><a href="#_lab2_0_1" rel="nofollow">子窗口代码</a></li> </ul> <li><a href="#_label1" rel="nofollow">关闭打开的窗口后刷新父页面</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_2" rel="nofollow">解决办法</a></li> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>关闭对话框后刷新列表</h2> <p>有些场景需要实现用户弹窗确定后自动刷新列表，父窗口绑定fevent即可</p> <p class="maodian"><a name="_lab2_0_0" rel="nofollow"></a></p> <h3>父窗口代码</h3> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;       &lt;div&gt;   &lt;el-button @click="$refs.editform.dialogFormVisible = true" &gt;编辑用户&lt;/el-button&gt;   &lt;editform  @fevent="update_table" ref="editform"&gt;   &lt;/editform&gt;       &lt;/div&gt;   &lt;/template&gt;</pre> </div> <div class="ay1code"> <pre class="brush:js;">&lt;script&gt;  import editform from './editform.vue'  export default {    components: {      editform    },    methods: {      update_table () {        console.log('列表框被刷新了')      }    }  }  &lt;/script&gt;</pre> </div> <p class="maodian"><a name="_lab2_0_1" rel="nofollow"></a></p> <h3>子窗口代码</h3> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;         &lt;el-dialog title="编辑用户"  :visible.sync="dialogFormVisible"&gt;             &lt;el-button @click="delete_user"&gt;删除用户&lt;/el-button&gt;      &lt;/el-dialog&gt;  &lt;/template&gt;</pre> </div> <div class="ay1code"> <pre class="brush:js;">&lt;script&gt;  export default {    data () {      return {        dialogFormVisible: false      }    },    methods: {      delete_user () {           this.$emit('fevent')           this.$message.success('删除成功')           this.dialogFormVisible = false      }    }  }  &lt;/script&gt;</pre> </div> <p>附加上自己的业务代码，即可实现列表自动刷新</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>关闭打开的窗口后刷新父页面</h2> <p><strong>背景：</strong>在做页面的过程中需要在页面列表里面添加数据，但是添加之后需要手动刷新页面才会出现添加的数据。</p> <p class="maodian"><a name="_lab2_1_2" rel="nofollow"></a></p> <h3>解决办法</h3> <p>可在添加成功之后添加代码 </p> <div class="ay1code"> <pre class="brush:js;">parent.location.reload();</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-56344.htm">elment-UI动态添加多个输入框并进行部分表单验证</a></p>
+                                        <p>下一个：<a href="/news/article-56914.htm">天津市宠物领养（天津市宠物领养机构）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-48873.htm" title=".NET 7 Preview 3添加了这些增强功能">.NET 7 Preview 3添加了这些增强功能</a></li>
+                        <li class="py-2"><a href="/news/article-53058.htm" title="宠物医院手续办理流程（宠物医院审批流程）">宠物医院手续办理流程（宠物医院审批流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-5-free-clash.htm" title="2月5日最新V2rayC订阅 | 18.7M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享">2月5日最新V2rayC订阅 | 18.7M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-54142.htm" title="宠物粮食品牌前十名有哪些牌子好 宠物粮食品牌前十名有哪些牌子好的">宠物粮食品牌前十名有哪些牌子好 宠物粮食品牌前十名有哪些牌子好的</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-clash-node-github.htm" title="2月10日最新V2rayC订阅 | 18.8M/S|2025年V2ray/Clash/SSR/Shadowrocket免费节点地址链接分享">2月10日最新V2rayC订阅 | 18.8M/S|2025年V2ray/Clash/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-50952.htm" title="开一家动物医院需要多久才能开（开一个动物医院需要多少钱）">开一家动物医院需要多久才能开（开一个动物医院需要多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-48309.htm" title="动物防疫员年终工作总结（动物防疫员年终个人工作总结）">动物防疫员年终工作总结（动物防疫员年终个人工作总结）</a></li>
+                        <li class="py-2"><a href="/news/article-50951.htm" title="动物疫苗要打几针的疫苗有效（动物疫苗要打几针的疫苗有效呢）">动物疫苗要打几针的疫苗有效（动物疫苗要打几针的疫苗有效呢）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-clash-subscribe.htm" title="2月9日最新V2rayC订阅 | 19.3M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享">2月9日最新V2rayC订阅 | 19.3M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-53593.htm" title="猫丢了找回来的几率大吗（猫丢了找回来之后的反应）">猫丢了找回来的几率大吗（猫丢了找回来之后的反应）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
