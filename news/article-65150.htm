@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-65150.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>C语言中常用的字符数组函数</title>
+        <meta name="description" content="所有的字符数组处理函数都包括在 &lt;string.h&gt;这个头文件中   一、strlen 函数 原型：size_t strlen(char const* string); 在C语言中如何计算" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-65150.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="C语言中常用的字符数组函数" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/a4d4421a29ffe3d935d82e17346a9a84.webp" />
+        <meta property="og:release_date" content="2025-03-01T06:59:21" />
+    <meta property="og:updated_time" content="2025-03-01T06:59:21" />
+        <meta property="og:description" content="所有的字符数组处理函数都包括在 &lt;string.h&gt;这个头文件中   一、strlen 函数 原型：size_t strlen(char const* string); 在C语言中如何计算" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C语言中常用的字符数组函数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">C语言中常用的字符数组函数</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <blockquote> <blockquote> <p>所有的字符数组处理函数都包括在 &lt;string.h&gt;这个头文件中</p> </blockquote> </blockquote> <h2><a id="strlen__1" rel="nofollow"></a>一、strlen 函数</h2> <p>原型：<code>size_t strlen(char const* string);</code></p> <p>在C语言中如何计算一个数组或者一个字符数组的长度？<code>在C语言中没有字符串类型，字符串是存放在字符型数组中</code>，所以一般形式的字符串就是数组。<br /> 一般来说，大家都是使用<code>sizeof</code>来计算数组长度的：</p> <pre><code class="prism language-c"><span class="token comment">// 整型数组</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token keyword">int</span> length<span class="token operator">=</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token operator">/</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p><code>sizeof</code>是一个操作符，返回的是一个对象或类型所占的字节大小。<br /> 但是在字符数组中<code>sizeof</code>返回的往往不是我们需要的。<br /> 因为字符数组的往往需要比其他数组多占一个空间长度。比如一个有效字符串的长度为9，那么实际长度则为10，而第10个字符是<code>'\0'</code>。表示字符串结束。</p> <p>使用<code>strlen</code>函数则会返回有效长度。</p> <pre><code class="prism language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span><span class="token keyword">int</span><span class="token function">myLen</span><span class="token punctuation">(</span><span class="token keyword">const</span><span class="token keyword">char</span><span class="token operator">*</span>line<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">int</span> strlen<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token punctuation">[</span>strlen<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'\0'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     strlen<span class="token operator">++</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">return</span> strlen<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">int</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token keyword">const</span><span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">char</span> line<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"hello"</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"SIZEOF的长度= %d\n"</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//6</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"strlen的长度= %d"</span><span class="token punctuation">,</span><span class="token function">myLen</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 5</span><span class="token keyword">return</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <h2><a id="strcmp_41" rel="nofollow"></a>二、strcmp</h2> <p>原型：<code>int strcmp(char const *s1, char const *s2, size_t len);</code>;</p> <p>功能：比较两个字符串。如果s1小于s2，strcmp函数返回一个小于零的值。如果s1大于s2，函数返回一个大于零的值。如果两个字符串相等，函数就返回零。</p> <pre><code class="prism language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span><span class="token keyword">int</span><span class="token function">mycmp</span><span class="token punctuation">(</span><span class="token keyword">const</span><span class="token keyword">char</span><span class="token operator">*</span>c1<span class="token punctuation">,</span><span class="token keyword">const</span><span class="token keyword">char</span><span class="token operator">*</span>c2<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">*</span>c1<span class="token operator">==</span><span class="token operator">*</span>c2<span class="token operator">&amp;&amp;</span><span class="token operator">*</span>c1<span class="token operator">==</span><span class="token string">'\0'</span><span class="token punctuation">)</span><span class="token comment">// 通过指针的自增来比较，同时判断是否有到了结束位置</span><span class="token punctuation">{<!-- --></span>     c1<span class="token operator">++</span><span class="token punctuation">;</span>     c2<span class="token operator">++</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">int</span> result<span class="token operator">=</span><span class="token operator">*</span>c1<span class="token operator">-</span><span class="token operator">*</span>c2<span class="token punctuation">;</span><span class="token keyword">return</span> result<span class="token operator">==</span><span class="token number">0</span><span class="token operator">?</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">(</span>result<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">int</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token keyword">const</span><span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">char</span> char1<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"bb"</span><span class="token punctuation">;</span><span class="token keyword">char</span> char2<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"a"</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">strcmp</span><span class="token punctuation">(</span>char1<span class="token punctuation">,</span> char2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 1</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token function">mycmp</span><span class="token punctuation">(</span>char1<span class="token punctuation">,</span> char2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 1</span><span class="token keyword">return</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <h2><a id="strcat_70" rel="nofollow"></a>三、strcat函数</h2> <p>原型：<code>char *strcat(char *dst, char const *src);</code></p> <p>功能：将一个字符串添加(连接)到另一个字符串的后面。</p> <p>注意：src和dst的所指的内存区域不能重叠，如果发生重叠，其结果是未定义的。</p> <pre><code class="prism language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span><span class="token keyword">char</span><span class="token operator">*</span><span class="token function">mycat</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span>des<span class="token punctuation">,</span><span class="token keyword">const</span><span class="token keyword">char</span><span class="token operator">*</span>src<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">char</span><span class="token operator">*</span>temp<span class="token operator">=</span> des<span class="token punctuation">;</span><span class="token comment">//定义临时指针指向目标字符数组</span>   temp<span class="token operator">=</span> des<span class="token operator">+</span><span class="token function">strlen</span><span class="token punctuation">(</span>des<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将目标字符串移入到结尾</span><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">*</span>temp<span class="token operator">++</span><span class="token operator">=</span><span class="token operator">*</span>src<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment">//通过指针自增实现赋值</span><span class="token operator">*</span>temp<span class="token operator">=</span><span class="token string">'\0'</span><span class="token punctuation">;</span><span class="token comment">//将目标字符串的结尾</span><span class="token keyword">return</span> des<span class="token punctuation">;</span><span class="token comment">// char *temp = des;</span><span class="token comment">// while (*temp != '\0')</span><span class="token comment">// {<!-- --></span><span class="token comment">//   temp++;</span><span class="token comment">// }</span><span class="token comment">// while ((*temp++ = *src++))</span><span class="token comment">//   *temp = '\0';</span><span class="token comment">// return des;</span><span class="token punctuation">}</span><span class="token keyword">int</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token keyword">const</span><span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">/* code */</span><span class="token keyword">char</span> c1<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"hello"</span><span class="token punctuation">;</span><span class="token keyword">char</span> c2<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"world"</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span><span class="token function">mycat</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span> c2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//helloworld</span><span class="token keyword">return</span><span class="token number">0</span><span class="token punctuation">;</span></code></pre> <h2><a id="strcpy_109" rel="nofollow"></a>四、strcpy</h2> <p>原型：<code>char *strcpy(char *dst, char const *src);</code></p> <p><strong>功能</strong>：将参数src字符串复制到dst参数中。如果参数src和dst在内存中出现重叠，其结果是未定义的。由于dst参数将进行修改，所以它必须是个字符数组或者是一个指向动态分配内存的数组的指针，<code>不能使用字符串常量</code>。返回参数dst的一份拷贝。<br /><strong>注意</strong>：</p> <p>目标参数dst的以前内容将被覆盖并丢失。即使新的字符串比dst原先的内存更短，由于新字符串是以NUL字符结尾，所以老字符串最后剩余的几个字符也会被有效的删除。如果字符串比数组长，多余的字符仍被复制，<code>它们将覆盖原先存储于数组后面的内存空间的值</code>。所以必须保证目标字符数组的空间足以容纳需要复制的字符串。</p> <pre><code class="prism language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span><span class="token keyword">char</span><span class="token operator">*</span><span class="token function">mycpy</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span>dst<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token keyword">const</span> restrict src<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">int</span> idx<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>c2<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     dst<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token operator">=</span> src<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">;</span>     idx<span class="token operator">++</span><span class="token punctuation">;</span><span class="token punctuation">}</span>   dst<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'\0'</span><span class="token punctuation">;</span><span class="token keyword">return</span> dst<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">int</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token keyword">const</span><span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">char</span> c1<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"adcdee"</span><span class="token punctuation">;</span><span class="token keyword">char</span> c2<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"eeeeddddddddd"</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span><span class="token function">strcpy</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span> c2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//eeeeddddddddd</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span><span class="token function">mycpy</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span> c2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//eeeeddddddddd</span><span class="token keyword">return</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <h2><a id="strchr_144" rel="nofollow"></a>五、strchr函数</h2> <p>原型：<code>char *strchr(char const *str, int ch);</code></p> <p>功能：在一个字符串中查找一个特定字符。</p> <p>注意：第2个参数是一个整型值。但是，它包含了一个字符值。strchr在字符串str中查找字符ch第一次出现的位置，找到后函数返回一个指向该位置的指针。如果该字符并不存在于str中，函数就返回一个NULL指针。strrchr的功能和strchr基本一致，只是它所返回的是一个指向字符串中该字符最后一次出现的位置(最右边那个)。<br /><strong>为了直观编程显示，第二个参数设成字符型</strong></p> <pre><code class="prism language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span><span class="token keyword">char</span><span class="token operator">*</span><span class="token function">Strchr</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span>dst<span class="token punctuation">,</span><span class="token keyword">const</span><span class="token keyword">char</span> str<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">*</span>dst<span class="token operator">!=</span><span class="token string">'\0'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">*</span>dst<span class="token operator">==</span> str<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span> dst<span class="token punctuation">;</span><span class="token punctuation">}</span>     dst<span class="token operator">++</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">return</span><span class="token constant">NULL</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">int</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token keyword">const</span><span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">char</span> c1<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"hello"</span><span class="token punctuation">;</span><span class="token keyword">char</span><span class="token operator">*</span>p<span class="token operator">=</span><span class="token function">strchr</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span><span class="token string">'l'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> p<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//llo</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span><span class="token function">Strchr</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span><span class="token string">'l'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//llo</span><span class="token keyword">return</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>// 暂时就总结这么多，以后补充</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64532.htm">中国兽药十大名牌厂家排名100强 中国兽药十大名牌厂家排名100强有哪些</a></p>
+                                        <p>下一个：<a href="/news/article-65151.htm">现在宠物美容店真的前景很好吗（宠物美容现在前景好么）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-57481.htm" title="做宠物粮生意赚钱吗知乎文章（做宠物粮生意怎样）">做宠物粮生意赚钱吗知乎文章（做宠物粮生意怎样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-free-ssr-node.htm" title="3月1日最新V2rayC订阅 | 21.6M/S|2025年V2ray/SSR/Shadowrocket/Clash免费节点地址链接分享">3月1日最新V2rayC订阅 | 21.6M/S|2025年V2ray/SSR/Shadowrocket/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-48308.htm" title="广州宠物用品批发城电话（广州大型宠物用品店）">广州宠物用品批发城电话（广州大型宠物用品店）</a></li>
+                        <li class="py-2"><a href="/news/article-49906.htm" title="宠物粮食店铺图片大全（宠物粮食生意怎么样）">宠物粮食店铺图片大全（宠物粮食生意怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-56915.htm" title="宠物医院通用好评模板（宠物医院优质好评500字）">宠物医院通用好评模板（宠物医院优质好评500字）</a></li>
+                        <li class="py-2"><a href="/news/article-60336.htm" title="动物诊疗许可证在哪里办（动物诊疗许可证办理流程）">动物诊疗许可证在哪里办（动物诊疗许可证办理流程）</a></li>
+                        <li class="py-2"><a href="/news/article-51494.htm" title="React-class——React表单与事件（受控组件与非受控组件、事件类型、事件对象、事件绑定）、React组件生命周期、面试">React-class——React表单与事件（受控组件与非受控组件、事件类型、事件对象、事件绑定）、React组件生命周期、面试</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-free-node-subscribe-links.htm" title="2月21日最新V2rayC订阅 | 20.3M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享">2月21日最新V2rayC订阅 | 20.3M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-63914.htm" title="猫三联一次疫苗多少钱（猫三联要多少钱第一针）">猫三联一次疫苗多少钱（猫三联要多少钱第一针）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-3-free-high-speed-nodes.htm" title="2月3日最新V2rayC订阅 | 21.7M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享">2月3日最新V2rayC订阅 | 21.7M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
