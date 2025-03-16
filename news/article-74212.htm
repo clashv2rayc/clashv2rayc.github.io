@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-74212.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>原生实现C#和Lua相互调用-Unity3D可用</title>
+        <meta name="description" content="引言 &nbsp;&nbsp;&nbsp;&nbsp;本篇简单介绍如何在C#中执行Lua脚本，传递数据到Lua中使用，以及Lua中调用C#导出的方法等。在Unity中开发测试，并打IL2CPP的And" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-74212.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="原生实现C#和Lua相互调用-Unity3D可用" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/7be6796a2cfb8001951609e6fb6b9cdd.webp" />
+        <meta property="og:release_date" content="2025-03-15T07:19:55" />
+    <meta property="og:updated_time" content="2025-03-15T07:19:55" />
+        <meta property="og:description" content="引言 &nbsp;&nbsp;&nbsp;&nbsp;本篇简单介绍如何在C#中执行Lua脚本，传递数据到Lua中使用，以及Lua中调用C#导出的方法等。在Unity中开发测试，并打IL2CPP的And" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="原生实现C#和Lua相互调用-Unity3D可用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">原生实现C#和Lua相互调用-Unity3D可用</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<p><strong>引言<br /></strong></p> <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;本篇简单介绍如何在C#中执行Lua脚本，传递数据到Lua中使用，以及Lua中调用C#导出的方法等。在Unity中开发测试，并打IL2CPP的Android包在模拟器上运行通过。Lua版本使用的是Lua5.1.5。</strong></p> <p><strong>一、编译Lua动态链接库</strong></p> <p><strong>&nbsp;&nbsp;1. 编译Windows下使用的DLL文件</strong></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用<strong>VS2015</strong>创建一个空的动态链接库项目，删除里面默认创建的几个文件(如果想自定义拓展可用保留)，然后把Lua的源码拷贝进来，添加到项目工程中，编译宏需要配置<strong>LUA_BUILD_AS_DLL</strong>和<strong>_CRT_SECURE_NO_WARNINGS</strong>。然后就可以编译x86和x64的DLL动态库，整体步骤简单易操作。</p> <p><strong>2. 编译Android下使用的SO文件</strong></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 通过<strong>NDK</strong>编译Android需要的so动态库，因此需要手写<strong><span title="Application.mk">Application.mk</span></strong>和<strong>Android.mk</strong>两个mk文件，下面是我使用的两个文件的内容，创建放在上面VS的工程里面即可，路径是在lua源码src的上一层目录。</p> <div class="cnblogs_Highlighter"> <pre class="brush:bash;gutter:true;"># Application.mk APP_PLATFORM = android-23 APP_ABI := armeabi-v7a arm64-v8a APP_STL := stlport_shared</pre> </div> <div class="cnblogs_Highlighter"> <pre class="brush:bash;gutter:true;"># Android.mk LOCAL_PATH := $(call my-dir) include $(CLEAR_VARS) MY_FILES_PATH  :=  $(LOCAL_PATH)/src MY_FILES_SUFFIX := %.c MY_UN_INCLUDE := %lua.c %luac.c # 递归遍历目录下的所有的文件 rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2)) # 获取相应的源文件 MY_ALL_FILES := $(foreach src_path,$(MY_FILES_PATH), $(call rwildcard,$(src_path),*.*) )  MY_SRC_LIST  := $(filter $(MY_FILES_SUFFIX),$(MY_ALL_FILES))  MY_SRC_LIST  := $(filter-out $(MY_UN_INCLUDE),$(MY_SRC_LIST))  MY_SRC_LIST  := $(MY_SRC_LIST:$(LOCAL_PATH)/%=%) LOCAL_SRC_FILES = $(MY_SRC_LIST) #打印编译信息 $(warning 'src_list='$(LOCAL_SRC_FILES)) LOCAL_MODULE    := CSharpLua LOCAL_LDLIBS += -ldl LOCAL_CFLAGS := $(L_CFLGAS) include $(BUILD_SHARED_LIBRARY)</pre> </div> <p>&nbsp; &nbsp; 将上面的mk文件放置完成后，打开CMD命令行，执行ndk编译。由于并不是在Android的jni项目目录，因此执行命令会有所不同，可以使用下面的命令执行生成，等待ndk执行完成后就生成了需要的so库。</p> <div class="cnblogs_Highlighter"> <pre class="brush:bash;gutter:true;">ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_APPLICATION_MK=./Application.mk</pre> </div> <p><strong>二、编写C#使用的API</strong></p> <p><strong></strong><strong>&nbsp;1. 动态链接库在Unity中的存放位置。</strong></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Unity项目<strong>Assets</strong>目录里面创建<strong>Plugins</strong>目录，用于存放不同平台的DLL库。Windows需要的DLL存放的目录为<strong>Assets/<strong>Plugins</strong>/x86和Assets/<strong>Plugins</strong>/x86_64</strong>；Android需要的SO文件存放的目录为<strong>Assets/Android/[libs/arm64-v8a]</strong>括号里面的目录其实就是上面NDK编译后生成的路径。</p> <p><strong>&nbsp;&nbsp;&nbsp;2. 编写C#的API[LuaDll.cs]</strong></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大部分的动态库中的接口直接使用以下这种方式即可使用，使用<strong>IntPtr</strong>来表示<strong>lua_State*</strong>对象，传入参数<strong>char*</strong>可用使用<strong>byte[]</strong>或者<strong>string，</strong>但是会有一点点区别。</p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">[DllImport("CSharpLua", EntryPoint = "luaL_newstate")] public static extern IntPtr luaL_newstate(); [DllImport("CSharpLua", EntryPoint = "luaL_openlibs")] public static extern void luaL_openlibs(IntPtr L); [DllImport("CSharpLua", EntryPoint = "luaL_loadbuffer")] public static extern int luaL_loadbuffer(IntPtr L, byte[] buff, uint size, string name); [DllImport("CSharpLua", EntryPoint = "lua_call")] public static extern void lua_call(IntPtr L, int nargs, int nresults); [DllImport("CSharpLua", EntryPoint = "lua_pcall")] public static extern int lua_pcall(IntPtr L, int nargs, int nresults, int errfunc);</pre> </div> <p><strong>3.需要注意的几个地方</strong></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. 返回char*时，不可直接使用string替换，否则调用会导致崩溃，因此需要像下面代码展示的那样进行一下转换才可以使用。</p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">[DllImport("CSharpLua", EntryPoint = "lua_tolstring")] private static extern IntPtr _lua_tolstring(IntPtr L, int idx, ref uint size); public static string lua_tolstring(IntPtr L, int idx, ref uint size) {     IntPtr buffer = _lua_tolstring(L, idx, ref size);     return Marshal.PtrToStringAnsi(buffer); }</pre> </div> <p>　　2. C#函数传递给Lua使用时，需要使用delegate委托类型。</p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">public delegate int LuaFunction(IntPtr L); [DllImport("CSharpLua", EntryPoint = "lua_pushcclosure")] public static extern void lua_pushcclosure(IntPtr L, LuaFunction func, int idx); public static void lua_pushcfunction(IntPtr L, LuaFunction func) {    lua_pushcclosure(L, func, 0); }</pre> </div> <p>　　3. 在lua源码中定义的宏代码是无法使用的，会提示找不到，需要在C#中手动实现，例如下面展示的2个宏。</p> <div class="cnblogs_Highlighter"> <pre class="brush:cpp;gutter:true;">#define lua_setglobal(L,s)  lua_setfield(L, LUA_GLOBALSINDEX, (s)) #define lua_getglobal(L,s)  lua_getfield(L, LUA_GLOBALSINDEX, (s))</pre> </div> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">[DllImport("CSharpLua", EntryPoint = "lua_getfield")] public static extern void lua_getfield(IntPtr L, int idx, string s); public static void lua_getglobal(IntPtr L, string s) {    lua_getfield(L, LUA_GLOBALSINDEX, s); } [DllImport("CSharpLua", EntryPoint = "lua_setfield")] public static extern void lua_setfield(IntPtr L, int idx, string s); public static void lua_setglobal(IntPtr L, string s) {    lua_setfield(L, LUA_GLOBALSINDEX, s); }</pre> </div> <p>　　4. 如需要将C#的类实例对象即<strong>userdata</strong>传递给lua，需要在C#中转换成IntPtr后传递，Lua返回的则需要通过IntPtr转换回C#的实例对象。</p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">[DllImport("CSharpLua", EntryPoint = "lua_pushlightuserdata")] public static extern void _lua_pushlightuserdata(IntPtr L, IntPtr p); public static void lua_pushlightuserdata&lt;T&gt;(IntPtr L, T p) {     IntPtr obj = Marshal.GetIUnknownForObject(p);     _lua_pushlightuserdata(L, obj); } [DllImport("CSharpLua", EntryPoint = "lua_touserdata")] public static extern IntPtr _lua_touserdata(IntPtr L, int idx); public static T lua_touserdata&lt;T&gt;(IntPtr L, int idx) {    IntPtr p = _lua_touserdata(L, idx);    return (T)Marshal.GetObjectForIUnknown(p); }</pre> </div> <p><strong>三、C#与Lua的相互调用举例</strong></p> <p><strong>&nbsp;&nbsp;1.&nbsp;C#中创建Lua环境</strong></p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">IntPtr L = LuaDll.luaL_newstate(); LuaDll.luaL_openlibs(L);</pre> </div> <p><strong>2. 加载Lua代码并执行，调用Lua的函数及向Lua传递参数。</strong></p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">var data = Resources.Load&lt;TextAsset&gt;(lua_file); int rc = LuaDll.luaL_loadbuffer(L, data.bytes, (uint)data.bytes.Length, lua_file); rc = LuaDll.lua_pcall(L, 0, 0, 0) LuaDll.lua_getglobal(L, "main"); // 传递参数 LuaDll.lua_pushinteger(L, 3333); LuaDll.lua_pushnumber(L, 3.3); // 执行main方法 int i = LuaDll.lua_pcall(L, 2, 0, 0);</pre> </div> <p><strong>3. 将C#函数提供给Lua使用，需要使用静态方法参考上面LuaFunction的定义。</strong></p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">LuaDll.lua_pushcfunction(L, LuaPrint); LuaDll.lua_setglobal(L, "print"); [MonoPInvokeCallback]   // 这个主要是在Android上需要。 static int LuaPrint(IntPtr L) {   Debug.Log(".....");   return 0; }</pre> </div> <p><strong>4. Lua代码调用C#方法并提供回调，由C#函数调用。</strong></p> <div class="cnblogs_Highlighter"> <pre class="brush:csharp;gutter:true;">static int FindAndBind(IntPtr L) {    GameObject go = LuaDll.lua_touserdata&lt;GameObject&gt;(L, 1);    string path = LuaDll.lua_tostring(L, 2);    // 这里将lua的函数放到LUA_REGISTRYINDEX上    int idx = LuaDll.luaL_refEx(L);    Transform t = go.transform.Find(path);    Button btn = t.GetComponent&lt;Button&gt;();    btn.onClick.AddListener(delegate() {      // 从LUA_REGISTRYINDEX栈获取lua的函数进行执行。      LuaDll.lua_rawgeti(L, LuaDll.LUA_REGISTRYINDEX, idx);      LuaDll.lua_pcall(L, 0, 0, 0);    });    return 0; }</pre> </div> <p><strong>四、总结</strong></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;总体来说交互调用还是比较的简单方便，跟使用C/C++与Lua交互差不多。我仅仅简单使用Lua源码进行编译动态库使用，可以方便的替换各个版本的lua进行使用。C#导出方法给Lua使用也相对简单，但是Unity中使用Lua的时候，不可能每个类例如GameObject、Transform等都手动写导出的代码给Lua使用。这块就可以去看tolua、xlua的实现，需要考虑很多东西。</p> <p></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-74211.htm">Elasticsearch 三种分页方式</a></p>
+                                        <p>下一个：<a href="/news/article-74893.htm">妙三多猫三联一共几针,间隔多久（妙三多猫三联一盒几支）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-55248.htm" title="广州领养狗狗去哪里领养（广州领养狗狗去哪里领养好）">广州领养狗狗去哪里领养（广州领养狗狗去哪里领养好）</a></li>
+                        <li class="py-2"><a href="/news/article-59194.htm" title="Springboot整合Spring Retry实现重试机制">Springboot整合Spring Retry实现重试机制</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-free-node-subscribe.htm" title="3月9日最新V2rayC订阅 | 22.8M/S|2025年Clash/V2ray/Shadowrocket/SSR免费节点地址链接分享">3月9日最新V2rayC订阅 | 22.8M/S|2025年Clash/V2ray/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-56344.htm" title="elment-UI动态添加多个输入框并进行部分表单验证">elment-UI动态添加多个输入框并进行部分表单验证</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-free-clash.htm" title="3月8日最新V2rayC订阅 | 22.7M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享">3月8日最新V2rayC订阅 | 22.7M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-56914.htm" title="天津市宠物领养（天津市宠物领养机构）">天津市宠物领养（天津市宠物领养机构）</a></li>
+                        <li class="py-2"><a href="/news/article-65150.htm" title="C语言中常用的字符数组函数">C语言中常用的字符数组函数</a></li>
+                        <li class="py-2"><a href="/news/article-70899.htm" title="配置简单RestTemplate">配置简单RestTemplate</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-node-github.htm" title="3月7日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享">3月7日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-node-share.htm" title="3月4日最新V2rayC订阅 | 20M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">3月4日最新V2rayC订阅 | 20M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>

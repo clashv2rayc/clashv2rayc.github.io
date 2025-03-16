@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-74211.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Elasticsearch 三种分页方式</title>
+        <meta name="description" content=""浅"分页可以理解为简单意义上的分页。它的原理很简单，就是查询前20条数据，然后截断前10条，只返回10-20的数据。这样其实白白浪费了前10条的查询。 GET test_dev/_search { " />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-74211.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="Elasticsearch 三种分页方式" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/8cd6e6d765f6b9cc36ddc65392036eff.webp" />
+        <meta property="og:release_date" content="2025-03-15T07:19:55" />
+    <meta property="og:updated_time" content="2025-03-15T07:19:55" />
+        <meta property="og:description" content=""浅"分页可以理解为简单意义上的分页。它的原理很简单，就是查询前20条数据，然后截断前10条，只返回10-20的数据。这样其实白白浪费了前10条的查询。 GET test_dev/_search { " />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Elasticsearch 三种分页方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">Elasticsearch 三种分页方式</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-github-gist"> </h1> <p>"浅"分页可以理解为简单意义上的分页。它的原理很简单，就是查询前20条数据，然后截断前10条，只返回10-20的数据。这样其实白白浪费了前10条的查询。</p> <pre><code>GET test_dev/_search {   "query": {     "bool": {       "filter": [         {           "term": {             "age": 28           }         }       ]     }   },   "size": 10,   "from": 20,   "sort": [     {       "timestamp": {         "order": "desc"       },       "_id": {         "order": "desc"       }     }   ] }</code></pre> <p>其中，from定义了目标数据的偏移值，size定义当前返回的数目。默认from为0，size为10，即所有的查询默认仅仅返回前10条数据。</p> <p>在这里有必要了解一下from/size的原理：<br /><mark>因为es是基于分片的，假设有5个分片，from=100，size=10。则会根据排序规则从5个分片中各取回100条数据数据，然后汇总成500条数据后选择最后面的10条数据。</mark></p> <p>做过测试，越往后的分页，执行的效率越低。总体上会随着from的增加，消耗时间也会增加。而且数据量越大，就越明显！</p> </h1> <p>from+size查询在10000-50000条数据（1000到5000页）以内的时候还是可以的，但是如果数据过多的话，就会出现深分页问题。</p> <p>为了解决上面的问题，elasticsearch提出了一个scroll滚动的方式。<br /> scroll 类似于sql中的cursor，使用scroll，每次只能获取一页的内容，然后会返回一个scroll_id。根据返回的这个scroll_id可以不断地获取下一页的内容，所以scroll并不适用于有跳页的情景。</p> <pre><code>GET test_dev/_search?scroll=5m {   "query": {     "bool": {       "filter": [         {           "term": {             "age": 28           }         }       ]     }   },   "size": 10,   "from": 0,   "sort": [     {       "timestamp": {         "order": "desc"       },       "_id": {         "order": "desc"       }     }   ] }</code></pre> <ol> <li>scroll=5m表示设置scroll_id保留5分钟可用。</li> <li>使用scroll必须要将from设置为0。</li> <li>size决定后面每次调用_search搜索返回的数量</li> </ol> <p>然后我们可以通过数据返回的_scroll_id读取下一页内容，每次请求将会读取下10条数据，直到数据读取完毕或者scroll_id保留时间截止：</p> <pre><code>GET _search/scroll {   "scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAAJZ9Fnk1d......",   "scroll": "5m" }</code></pre> <p><mark>注意：请求的接口不再使用索引名了，而是 _search/scroll，其中GET和POST方法都可以使用。</mark></p> <p>scroll删除<br /> 根据官方文档的说法，scroll的搜索上下文会在scroll的保留时间截止后自动清除，但是我们知道scroll是非常消耗资源的，所以一个建议就是当不需要了scroll数据的时候，尽可能快的把scroll_id显式删除掉。</p> <p>清除指定的scroll_id：</p> <pre><code>DELETE _search/scroll/DnF1ZXJ5VGhlbkZldGNo.....</code></pre> <p>清除所有的scroll：</p> <pre><code>DELETE _search/scroll/_all</code></pre> </h1> <p>scroll 的方式，官方的建议不用于实时的请求（一般用于数据导出），因为每一个 scroll_id 不仅会占用大量的资源，而且会生成历史快照，对于数据的变更不会反映到快照上。</p> <p>search_after 分页的方式是根据上一页的最后一条数据来确定下一页的位置，同时在分页请求的过程中，如果有索引数据的增删改查，这些变更也会实时的反映到游标上。但是需要注意，因为每一页的数据依赖于上一页最后一条数据，所以无法跳页请求。</p> <p><mark>为了找到每一页最后一条数据，每个文档必须有一个全局唯一值，官方推荐使用 _uid 作为全局唯一值</mark>，其实使用业务层的 id 也可以。</p> <pre><code>GET test_dev/_search {   "query": {     "bool": {       "filter": [         {           "term": {             "age": 28           }         }       ]     }   },   "size": 20,   "from": 0,   "sort": [     {       "timestamp": {         "order": "desc"       },       "_id": {         "order": "desc"       }     }   ] }</code></pre> <ol> <li>使用search_after必须要设置from=0。</li> <li>这里我使用timestamp和_id作为唯一值排序。</li> <li>我们在返回的最后一条数据里拿到sort属性的值传入到search_after。</li> </ol> <p>使用sort返回的值搜索下一页：</p> <pre><code>GET test_dev/_search {   "query": {     "bool": {       "filter": [         {           "term": {             "age": 28           }         }       ]     }   },   "size": 10,   "from": 0,   "search_after": [     1541495312521,     "d0xH6GYBBtbwbQSP0j1A"   ],   "sort": [     {       "timestamp": {         "order": "desc"       },       "_id": {         "order": "desc"       }     }   ] }</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-73547.htm">让猫挠了轻微出血多久打针（让猫挠了轻微出血多久打针有效）</a></p>
+                                        <p>下一个：<a href="/news/article-74212.htm">原生实现C#和Lua相互调用-Unity3D可用</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-67644.htm" title="可以自己给猫打疫苗针吗（可以自己给猫咪打疫苗么）">可以自己给猫打疫苗针吗（可以自己给猫咪打疫苗么）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-node-share.htm" title="3月4日最新V2rayC订阅 | 20M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">3月4日最新V2rayC订阅 | 20M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-6-free-node-subscribe-links.htm" title="2月6日最新V2rayC订阅 | 22.1M/S|2025年Shadowrocket/SSR/Clash/V2ray免费节点地址链接分享">2月6日最新V2rayC订阅 | 22.1M/S|2025年Shadowrocket/SSR/Clash/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-free-subscribe-node.htm" title="2月4日最新V2rayC订阅 | 20.3M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享">2月4日最新V2rayC订阅 | 20.3M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-70900.htm" title="中国农业大学动物医院价目表体检（中国农业大学动物医院收费标准）">中国农业大学动物医院价目表体检（中国农业大学动物医院收费标准）</a></li>
+                        <li class="py-2"><a href="/news/article-50433.htm" title="长沙领养宠物猫在哪里领（长沙领养宠物猫在哪里领养）">长沙领养宠物猫在哪里领（长沙领养宠物猫在哪里领养）</a></li>
+                        <li class="py-2"><a href="/news/article-73547.htm" title="让猫挠了轻微出血多久打针（让猫挠了轻微出血多久打针有效）">让猫挠了轻微出血多久打针（让猫挠了轻微出血多久打针有效）</a></li>
+                        <li class="py-2"><a href="/news/article-60337.htm" title="宠康动物医院是连锁的吗（宠康宠物食品有限公司）">宠康动物医院是连锁的吗（宠康宠物食品有限公司）</a></li>
+                        <li class="py-2"><a href="/news/article-49906.htm" title="宠物粮食店铺图片大全（宠物粮食生意怎么样）">宠物粮食店铺图片大全（宠物粮食生意怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-62109.htm" title="猫咪打猫瘟疫苗多少钱一针啊（猫瘟 疫苗）">猫咪打猫瘟疫苗多少钱一针啊（猫瘟 疫苗）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
