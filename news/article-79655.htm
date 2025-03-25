@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-79655.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>java中集合的Collection集合</title>
+        <meta name="description" content="1.集合的主要体系及分支   1.概述：首先Collection是属于单列集合的顶层接口，表示为一组对象。其类型为引用数据类型，具体创建对象，通过多态的形式进行。 2.主要常用方法(E这种是指泛型类型" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-79655.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="java中集合的Collection集合" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/9b0dba60208f5bdaeff02a5c28088aba.webp" />
+        <meta property="og:release_date" content="2025-03-23T08:22:55" />
+    <meta property="og:updated_time" content="2025-03-23T08:22:55" />
+        <meta property="og:description" content="1.集合的主要体系及分支   1.概述：首先Collection是属于单列集合的顶层接口，表示为一组对象。其类型为引用数据类型，具体创建对象，通过多态的形式进行。 2.主要常用方法(E这种是指泛型类型" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="java中集合的Collection集合">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">java中集合的Collection集合</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h2> <a id="1_0" rel="nofollow"></a>1.集合的主要体系及分支</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230110/7faa72e84705b8eb40105a27c058e41b.jpg" alt="java中集合的Collection集合"></p> </h1> <p>1.概述：首先Collection是属于单列集合的顶层接口，表示为一组对象。其类型为引用数据类型，具体创建对象，通过多态的形式进行。<br /> 2.主要常用方法(E这种是指泛型类型，可以为任何引用类型)：<img decoding="async" src="http://img.555519.xyz/uploads/20230110/36b41632666fd1570028f0afa5c3e5a6.jpg" alt="java中集合的Collection集合"><br /> 3.Collection集合的遍历(Iterator迭代器，集合的专用遍历方式) <br /> 概述：<img decoding="async" src="http://img.555519.xyz/uploads/20230110/35f7fae4e3923386c73f1ee108ee5959.jpg" alt="java中集合的Collection集合"></p> </h1> <p>1.概述:有序集合，且允许有重复的元素，使用者可以精确的控制每个元素的插入位置，并且可以快速访问。<br /> 特点：有序(存储与取出顺序一致)，且元素可以重复。<br /> 2.常用方法：<img decoding="async" src="http://img.555519.xyz/uploads/20230110/abdad1572f839d7012b03fce35bb08dc.jpg" alt="java中集合的Collection集合"><br /> *<strong>3.List的列表迭代器（Listlterator）</strong><br /><strong>用法</strong>：可以按照任意方向进行遍历，并在迭代期间修改列表，并获取列表中迭代器的位置，是list集合特有的迭代器。<br /> 常用方法：<img decoding="async" src="http://img.555519.xyz/uploads/20230110/7225a2dd1b7c529e519ff20e726391de.jpg" alt="java中集合的Collection集合"><br /> 当使用倒叙遍历时，是需要注意先进行一遍正向顺序；或者直接通过Collection工具类中的reverse()的方法进行倒叙，再输出。<br /><strong>4.并发修改异常(ConcurrentModificationException)</strong><br /><strong>主要产生原因</strong>：通过内部类的形式，当通过hasNext()这个方法时，遍历集合中加以判断并添加时会发生并发异常，是因为list.add（）会导致实际的修改集合和预期的修改集合不对等而触发并发修改异常。<br /><strong>因为</strong>:当你使用list的add方法时候，只会添加实际修改集合的值，而预期的修改集合值不会增加，而hasNext()的使用是需要预期和实际进行判断的。<br /> 如何避免这种异常出现：？<br /> 1.使用列表迭代器的方法进行添加，因为add不会导致实际与预期的不对等。<br /> 2.通过for循环进行遍历。</p> <h2> <a id="21_List_22" rel="nofollow"></a>2.1 List的实现类</h2> <p>1.ArrayList(底层数据结构属于数组实现，增删慢，查询快)；<br /> 2.LinkedList(底层数据结构属于双链表，查询慢，增删快)；<br /> 常用方法：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/da9dca83c7627d063c0d18d2dcd71589.jpg" alt="java中集合的Collection集合"></p> </h1> <p>特点：集合是无序的(存储与取出顺序不一致)，且不允许有重复元素，没有索引值，因此不能使用普通for遍历。</p> <h2> <a id="31HashSetSet_32" rel="nofollow"></a>3.1HashSet(Set的实现类)</h2> <p>1.哈希值<br /> 概述：哈希值是JDK通过对象的地址或者字符串或者数字算出来的int类型的值。<br /> 特点：同一个对象的哈希值是相同的，且在默认情况下不同对象的哈希值是不同的。<br /> 2.数据结构之哈希表<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/69b9f7d7674bca646d41fea2f569f5bf.jpg" alt="java中集合的Collection集合"><br /><strong>3.怎么HashSet集合的元素唯一性?(重中之重)</strong><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/8e553ee499a99943d1cd0c7b6513910b.jpg" alt="java中集合的Collection集合"></p> <p><strong>4.LinkedHashSet集合(HashSet的子类)</strong><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/a7a75f327a8785e8f787391e4d47799b.jpg" alt="java中集合的Collection集合"><br /> LinkedHashSet集合元素是有序的。</p> <h2> <a id="32TreeSetSet_44" rel="nofollow"></a>3.2TreeSet集合(Set的实现类)</h2> <p><strong>特点</strong>:可以通过自然排序或者特定的比较器(主要用于Comparable接口来进行)来进行排序；<br /><strong>自然排序Comparable：</strong><img decoding="async" src="http://img.555519.xyz/uploads/20230110/ebd7ef9508f370b8ee4e16b5c0f8511b.jpg" alt="java中集合的Collection集合"></p> <p>String类实现类自然排序Comparable接口，则可以直接调用用来判断字符串之间的大小，而当一个类的对象之间需要比较时，是需要实现自然排序Comparable接口，重写其中compareTo的方法。(TreetSet可以通过匿名内部类的方法来进行重写自然排序方法)。</p> </h1> <h2> <a id="1Arraylist__LinkedList__52" rel="nofollow"></a>1、Arraylist 与 LinkedList 异同</h2> <p><strong>1. 是否保证线程安全</strong>： ArrayList 和 LinkedList 都是不同步的，也就是不保证线程安全；<br /><strong>2. 底层数据结构</strong>： Arraylist 底层使用的是Object数组；LinkedList 底层使用的是双向循环链表数据结构；<br /><strong>3. 插入和删除是否受元素位置的影响</strong>： <strong>① ArrayList 采用数组存储，所以插入和删除元素的时间复杂度受元素位置的影响。</strong> 比如：执行add(E e)方法的时候， ArrayList 会默认在将指定的元素追加到此列表的末尾，这种情况时间复杂度就是O(1)。但是如果要在指定位置 i 插入和删除元素的话（add(int index, E element)）时间复杂度就为 O(n-i)。因为在进行上述操作的时候集合中第 i 和第 i 个元素之后的(n-i)个元素都要执行向后位/向前移一位的操作。 <strong>② LinkedList 采用链表存储，所以插入，删除元素时间复杂度不受元素位置的影响，都是近似 O（1）而数组为近似 O（n）。</strong><br /><strong>4. 是否支持快速随机访问</strong>： LinkedList 不支持高效的随机元素访问，而ArrayList 实现了RandmoAccess 接口，所以有随机访问功能。快速随机访问就是通过元素的序号快速获取元素对象(对应于get(int index)方法)。<br /><strong>5. 内存空间占用</strong>： ArrayList的空 间浪费主要体现在在list列表的结尾会预留一定的容量空间，而LinkedList的空间花费则体现在它的每一个元素都需要消耗比ArrayList更多的空间（因为要存放直接后继和直接前驱以及数据）。</p> <h2> <a id="2ArrayList__Vector__60" rel="nofollow"></a>2、ArrayList 与 Vector 区别</h2> <p>Vector类的所有方法都是同步的。可以由两个线程安全地访问一个Vector对象、但是一个线程访问Vector的话代码要在同步操作上耗费大量的时间。<br /> Arraylist不是同步的，所以在不需要保证线程安全时时建议使用Arraylist。</p> </h1> <h2> <a id="1Collection_66" rel="nofollow"></a>1.Collection</h2> <p><strong>1. List</strong><br /> Arraylist： Object数组<br /> Vector： Object数组<br /> LinkedList： 双向循环链表<br /><strong>2. Set</strong><br /> HashSet（无序，唯一）: 基于 HashMap 实现的，底层采用 HashMap 来保存元素。<br /> LinkedHashSet： LinkedHashSet 继承与 HashSet，并且其内部是通过 LinkedHashMap 来实现的。有点类似于我们之前说的LinkedHashMap 其内部是基于 Hashmap 实现一样，不过还是有一点点区别的。<br /> TreeSet（有序，唯一）： 红黑树(自平衡的排序二叉树)。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78972.htm">考兽医资格证有用吗（考兽医资格证有用吗知乎）</a></p>
+                                        <p>下一个：<a href="/news/article-79656.htm">猫三联三针一共多少钱一针啊（猫三联三针有什么区别）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-55247.htm" title="浅谈Redis缓存和数据库一致性问题">浅谈Redis缓存和数据库一致性问题</a></li>
+                        <li class="py-2"><a href="/news/article-81039.htm" title="TS内置类型与拓展_在线工具">TS内置类型与拓展_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-node-github.htm" title="3月7日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享">3月7日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-67031.htm" title="Java实现最小高度树_java">Java实现最小高度树_java</a></li>
+                        <li class="py-2"><a href="/news/article-61511.htm" title="南京狗狗领养 南京狗狗领养中心在哪里">南京狗狗领养 南京狗狗领养中心在哪里</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-free-ssr-subscribe.htm" title="2月11日最新V2rayC订阅 | 18.8M/S|2025年SSR/Clash/Shadowrocket/V2ray免费节点地址链接分享">2月11日最新V2rayC订阅 | 18.8M/S|2025年SSR/Clash/Shadowrocket/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-free-high-speed-nodes.htm" title="3月22日最新V2rayC订阅 | 19.9M/S|2025年Clash/Shadowrocket/SSR/V2ray免费节点地址链接分享">3月22日最新V2rayC订阅 | 19.9M/S|2025年Clash/Shadowrocket/SSR/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-49400.htm" title="请多多无货源店怎么开（拼多多无货源店怎么开）">请多多无货源店怎么开（拼多多无货源店怎么开）</a></li>
+                        <li class="py-2"><a href="/news/article-72879.htm" title="领养宠物狗狗的流程视频（领养宠物狗狗的流程视频大全）">领养宠物狗狗的流程视频（领养宠物狗狗的流程视频大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-clash-node.htm" title="2月18日最新V2rayC订阅 | 20.5M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享">2月18日最新V2rayC订阅 | 20.5M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
