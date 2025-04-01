@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-83847.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>linux安装mysql以及允许外网访问mysql</title>
+        <meta name="description" content="下载社区版本  下载最新版     下载历史版本  点击 Archives  文件上传云服务器 /opt/mysql 存放目录随便  添加用户组 groupadd mysql useradd -r -" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-83847.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="linux安装mysql以及允许外网访问mysql" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/2ed7de3021079d2f7e67eccaa1020a57.webp" />
+        <meta property="og:release_date" content="2025-03-29T09:00:13" />
+    <meta property="og:updated_time" content="2025-03-29T09:00:13" />
+        <meta property="og:description" content="下载社区版本  下载最新版     下载历史版本  点击 Archives  文件上传云服务器 /opt/mysql 存放目录随便  添加用户组 groupadd mysql useradd -r -" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="linux安装mysql以及允许外网访问mysql">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">linux安装mysql以及允许外网访问mysql</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h4> <a id="_0" rel="nofollow"></a>下载社区版本</h4> <ul> <li>下载最新版<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/67b326db741f0b86e7cee75b54c4b13a.jpg" alt="linux安装mysql以及允许外网访问mysql"> </li> </ul> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/87b4f97c9007b56790595ddfe9529bf0.jpg" alt="linux安装mysql以及允许外网访问mysql"></p> <ul> <li>下载历史版本</li> </ul> <p>点击 Archives<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/4b5d7580b218b6147f1d7bae0c2e4bca.jpg" alt="linux安装mysql以及允许外网访问mysql"></p> <h4> <a id="_13" rel="nofollow"></a>文件上传云服务器</h4> <p><code>/opt/mysql</code> 存放目录随便</p> <h4> <a id="_16" rel="nofollow"></a>添加用户组</h4> <pre><code class="prism language-shell"><span class="token function">groupadd</span> mysql <span class="token function">useradd</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">-g</span> mysql mysql </code></pre> <h4> <a id="mariadb_21" rel="nofollow"></a>删除mariadb</h4> <pre><code class="prism language-shell"><span class="token function">rpm</span> -qa<span class="token operator">|</span><span class="token function">grep</span> mariadb  <span class="token function">rpm</span> <span class="token parameter variable">-e</span> <span class="token parameter variable">--nodeps</span> mariadb-libs </code></pre> <h4> <a id="_28" rel="nofollow"></a>安装</h4> <ul> <li>解压 <pre><code class="prism language-shell"><span class="token function">tar</span> <span class="token parameter variable">-xvf</span> mysql-5.7.20-1.el7.x86_64.rpm-bundle.tar </code></pre> </li> <li>install (如果文件中没有安装包可以跳过！！！！！！！) <pre><code class="prism language-shell">rmp <span class="token parameter variable">-ivh</span> mysql-community-common-5.7.20-1.el7.x86_64.rpm rmp <span class="token parameter variable">-ivh</span> mysql-community-client-plugins-5.7.20-1.el7.x86_64.rpm rmp <span class="token parameter variable">-ivh</span> mysql-community-libs-5.7.20-1.el7.x86_64.rpm rmp <span class="token parameter variable">-ivh</span> mysql-community-client-5.7.20-1.el7.x86_64.rpm rmp <span class="token parameter variable">-ivh</span> mysql-community-icu-data-files-5.7.20-1.el7.x86_64.rpm rmp <span class="token parameter variable">-ivh</span> mysql-community-server-5.7.20-1.el7.x86_64.rpm </code></pre> </li> </ul> <h4> <a id="_43" rel="nofollow"></a>初始化</h4> <pre><code class="prism language-shell"> mysqld <span class="token parameter variable">--initialize</span> <span class="token parameter variable">--comsole</span>  <span class="token function">chown</span> <span class="token parameter variable">-R</span> mysql:mysql /var/lib/mysql/ </code></pre> <h4> <a id="_49" rel="nofollow"></a>启动服务</h4> <pre><code class="prism language-shell"> systemctl start mysqld </code></pre> <h4> <a id="_54" rel="nofollow"></a>查看临时密码</h4> <pre><code class="prism language-shell"> <span class="token function">cat</span> /var/log/mysqld.log<span class="token operator">|</span><span class="token function">grep</span> localhost </code></pre> <h4> <a id="_59" rel="nofollow"></a>修改密码</h4> <pre><code class="prism language-shell"> mysql <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-p</span>   输入刚才cat到的密码    alter user <span class="token string">'root'</span>@<span class="token string">'localhost'</span> identified by <span class="token string">'123456'</span>   <span class="token builtin class-name">exit</span>   mysql <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-p</span> <span class="token number">123456</span> </code></pre> <h4> <a id="_72" rel="nofollow"></a>登录</h4> <pre><code class="prism language-shell"> mysql <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-p</span> <span class="token number">123456</span> </code></pre> <h4> <a id="yummysql__79" rel="nofollow"></a>yum安装的mysql 目录结构</h4> <p>/var/lib/mysql mysql数据文件存放路径，可自定义</p> <p>/etc/my.cnf mysql配置文件路径</p> <p>/usr/lib64/mysql mysql库文件路径</p> <p>/usr/bin/mysql* mysql二进制可执行文件路径</p> <p>/etc/rc.d/init.d/mysqld mysql服务管理脚本地址</p> <p>/var/log/mysqld.log mysql日志文件路径</p> <h4> <a id="MySQL_94" rel="nofollow"></a>允许外网连接MySQL</h4> <ul> <li> <p>确保云服务器的 3306端口的防火墙是开启的</p> </li> <li> <p>修改mysql配置文件</p> <pre><code class="prism language-shell">   <span class="token function">vim</span> /etc/my.cnf     <span class="token comment"># 添加一行配置</span>    bind-address  <span class="token operator">=</span><span class="token number">0.0</span>.0.0 </code></pre> </li> <li> <p>mysql配置</p> <pre><code class="prism language-shell">   mysql <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-p</span> <span class="token number">123456</span>    use mysql    update user <span class="token builtin class-name">set</span> <span class="token function">host</span> <span class="token operator">=</span> <span class="token string">'%'</span> where user <span class="token operator">=</span> <span class="token string">'root'</span><span class="token punctuation">;</span>    FLUSH PRIVILEGES    <span class="token builtin class-name">exit</span> </code></pre> </li> </ul> <p>这样配置就可以用sqlyog去连接了</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/c67dd5ffa8226abba4320a8e06d7aa64.jpg" alt="linux安装mysql以及允许外网访问mysql"></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-83157.htm">动物医院牌匾设计图片大全（动物医院诊室设计图）</a></p>
+                                        <p>下一个：<a href="/news/article-83848.htm">猫咪三针疫苗多少钱一只猫用（宠物猫三针疫苗多少钱）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-clash.htm" title="3月23日最新V2rayC订阅 | 19.3M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享">3月23日最新V2rayC订阅 | 19.3M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-free-node-subscribe.htm" title="3月5日最新V2rayC订阅 | 20.7M/S|2025年V2ray/Clash/SSR/Shadowrocket免费节点地址链接分享">3月5日最新V2rayC订阅 | 20.7M/S|2025年V2ray/Clash/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-63299.htm" title="同城领养狗狗的一般在什么平台 同城领养狗狗的一般在什么平台可以领养">同城领养狗狗的一般在什么平台 同城领养狗狗的一般在什么平台可以领养</a></li>
+                        <li class="py-2"><a href="/news/article-69599.htm" title="SpringBoot中处理的转发与重定向">SpringBoot中处理的转发与重定向</a></li>
+                        <li class="py-2"><a href="/news/article-48309.htm" title="动物防疫员年终工作总结（动物防疫员年终个人工作总结）">动物防疫员年终工作总结（动物防疫员年终个人工作总结）</a></li>
+                        <li class="py-2"><a href="/news/article-77591.htm" title="八公家宠物酒店（八公家宠物酒店怎么样）">八公家宠物酒店（八公家宠物酒店怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-clash-node.htm" title="3月30日最新V2rayC订阅 | 18.8M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享">3月30日最新V2rayC订阅 | 18.8M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-80321.htm" title="狗粮品牌哪个好（国产十大放心狗粮品牌排行榜）">狗粮品牌哪个好（国产十大放心狗粮品牌排行榜）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-subscribe-node.htm" title="3月18日最新V2rayC订阅 | 20.4M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享">3月18日最新V2rayC订阅 | 20.4M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-free-node-subscribe.htm" title="2月13日最新V2rayC订阅 | 23M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享">2月13日最新V2rayC订阅 | 23M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>

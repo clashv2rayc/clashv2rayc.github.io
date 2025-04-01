@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-84564.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>vue修饰符：.lazy .number .trim 的作用以及使用场景介绍</title>
+        <meta name="description" content="在 Vue—修饰符 里面有这么三种属性：  .lazy .number .trim   1. lazy 在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-84564.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="vue修饰符：.lazy .number .trim 的作用以及使用场景介绍" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/04f69ee906c661be0ce78159130e8c46.webp" />
+        <meta property="og:release_date" content="2025-03-30T09:33:26" />
+    <meta property="og:updated_time" content="2025-03-30T09:33:26" />
+        <meta property="og:description" content="在 Vue—修饰符 里面有这么三种属性：  .lazy .number .trim   1. lazy 在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue修饰符：.lazy .number .trim 的作用以及使用场景介绍">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">vue修饰符：.lazy .number .trim 的作用以及使用场景介绍</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <blockquote> <p>在 <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://cn.vuejs.org/v2/guide/forms.html#lazy"  rel="nofollow">Vue—修饰符</a> 里面有这么三种属性：</p> <ul> <li><strong>.lazy</strong></li> <li><strong>.number</strong></li> <li><strong>.trim</strong></li> </ul> </blockquote> <p><strong>1. lazy</strong></p> <p><strong>在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转为在 change 事件_之后_进行同步。<br /> 意思是什么呢，就是说当我们在input输入框输入数据时，v-model绑定的值不会发发生变化，但是当我们停止输入，输入框失去焦点或者按下回车时，v-model绑定的值才会发生变化，即<code>在“change”时而非“input”时更新</code>：</strong></p> <p>示例代码：</p> <pre><code class="prism language-typescript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token punctuation">.</span>lazy修饰符<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>lazy<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> value <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>   <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{<!-- --></span>       <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>           <span class="token keyword">return</span><span class="token punctuation">{<!-- --></span>             value<span class="token punctuation">:</span><span class="token string">''</span>           <span class="token punctuation">}</span>       <span class="token punctuation">}</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <p>效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221207/ce595e736ee302c61c65d761c57ba04c.jpg" alt="vue修饰符：.lazy .number .trim 的作用以及使用场景介绍"></p> <p><strong>2. number</strong></p> <p><strong><code>自动将用户的输入值转为数值类型</code>。<br /> 这个修饰符通常很有用，因为即使在 type=“number” 时，HTML 输入元素的值也总会返回字符串。如果这个值无法被 <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseFloat"  rel="nofollow">parseFloat()</a>解析，则会返回原始的值。即<code>虽然你输入的是数字，但它的类型其实是String</code>：</strong></p> <p>示例代码：</p> <pre><code class="prism language-typescript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token builtin">number</span>修饰符<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">"number"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>该数据类型是：<span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> <span class="token keyword">typeof</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>   <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{<!-- --></span>       <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>           <span class="token keyword">return</span><span class="token punctuation">{<!-- --></span>             value<span class="token punctuation">:</span><span class="token string">''</span>           <span class="token punctuation">}</span>       <span class="token punctuation">}</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <p>效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221207/563d4c7c498c849594310908438e87df.jpg" alt="vue修饰符：.lazy .number .trim 的作用以及使用场景介绍"></p> <p><strong>3. trim</strong></p> <p><strong><code>自动过滤用户输入的首尾空白字符</code>。</strong></p> <p>示例代码：</p> <pre><code class="prism language-typescript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token punctuation">.</span>trim修饰符<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>trim<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>value的长度是：<span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span> value<span class="token punctuation">.</span>length <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>   <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{<!-- --></span>       <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>           <span class="token keyword">return</span><span class="token punctuation">{<!-- --></span>             value<span class="token punctuation">:</span><span class="token string">''</span>           <span class="token punctuation">}</span>       <span class="token punctuation">}</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <p>效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221207/038066d38cbf56e8cf4a22248a400920.jpg" alt="vue修饰符：.lazy .number .trim 的作用以及使用场景介绍"></p> <hr/> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-83848.htm">猫咪三针疫苗多少钱一只猫用（宠物猫三针疫苗多少钱）</a></p>
+                                        <p>下一个：<a href="/news/article-84565.htm">动物疫苗贵吗多少钱一针啊（动物疫苗价格查询）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-66392.htm" title="宠物粮食品牌代理怎么做的 宠物粮食品牌代理怎么做的呢">宠物粮食品牌代理怎么做的 宠物粮食品牌代理怎么做的呢</a></li>
+                        <li class="py-2"><a href="/news/article-78972.htm" title="考兽医资格证有用吗（考兽医资格证有用吗知乎）">考兽医资格证有用吗（考兽医资格证有用吗知乎）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-subscribe-node.htm" title="3月18日最新V2rayC订阅 | 20.4M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享">3月18日最新V2rayC订阅 | 20.4M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-free-node-subscribe.htm" title="3月5日最新V2rayC订阅 | 20.7M/S|2025年V2ray/Clash/SSR/Shadowrocket免费节点地址链接分享">3月5日最新V2rayC订阅 | 20.7M/S|2025年V2ray/Clash/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-19-free-ssr-subscribe.htm" title="3月19日最新V2rayC订阅 | 18.2M/S|2025年Clash/V2ray/Shadowrocket/SSR免费节点地址链接分享">3月19日最新V2rayC订阅 | 18.2M/S|2025年Clash/V2ray/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-clash.htm" title="3月23日最新V2rayC订阅 | 19.3M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享">3月23日最新V2rayC订阅 | 19.3M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-85286.htm" title="被打了疫苗的动物抓伤有事吗（被打了疫苗的动物抓伤有事吗会传染吗）">被打了疫苗的动物抓伤有事吗（被打了疫苗的动物抓伤有事吗会传染吗）</a></li>
+                        <li class="py-2"><a href="/news/article-78276.htm" title="宠物粮食厂家有些款不能网上销售 宠物粮食厂家有些款不能网上销售吗">宠物粮食厂家有些款不能网上销售 宠物粮食厂家有些款不能网上销售吗</a></li>
+                        <li class="py-2"><a href="/news/article-68940.htm" title="HTML5 Canvas 水流样式 Loading 动画">HTML5 Canvas 水流样式 Loading 动画</a></li>
+                        <li class="py-2"><a href="/news/article-77590.htm" title="v-model.trim用法及其他修饰符">v-model.trim用法及其他修饰符</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                <p>
+                                    <a href="/">首页</a> |
+                                    <a href="/free-node/">免费节点</a> |
+                                    <a href="/news/">新闻资讯</a> |
+                                    <a href="/about-us.htm">关于我们</a> |
+                                    <a href="/disclaimer.htm">免责申明</a> |
+                                    <a href="/privacy.htm">隐私申明</a> |
+                                    <a href="/sitemap.xml">网站地图</a>
+                                </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
