@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-88163.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Spring JdbcTemplate入门</title>
+        <meta name="description" content="Spring JdbcTemplate入门 一、创建数据库和表 2、在pom文件里添加数据库相关依赖3、在lesson06.bean的子包里创建User类4、创建用户数据访问接口 5、创建用户数据访问" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-88163.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="Spring JdbcTemplate入门" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/29b1c23a21195a25858fc0261ad84329.webp" />
+        <meta property="og:release_date" content="2025-04-04T09:07:37" />
+    <meta property="og:updated_time" content="2025-04-04T09:07:37" />
+        <meta property="og:description" content="Spring JdbcTemplate入门 一、创建数据库和表 2、在pom文件里添加数据库相关依赖3、在lesson06.bean的子包里创建User类4、创建用户数据访问接口 5、创建用户数据访问" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring JdbcTemplate入门">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">Spring JdbcTemplate入门</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="Spring_JdbcTemplate_0" rel="nofollow"></a>Spring JdbcTemplate入门</h2> <p>一、创建数据库和表<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/1da678c2ba20142ec2b0fac3e2492fbd.jpg" alt="Spring JdbcTemplate入门"><br /> 2、在pom文件里添加数据库相关依赖<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/2cd6099bb3cccce21deefad9ae1e2d96.jpg" alt="Spring JdbcTemplate入门">3、在lesson06.bean的子包里创建User类<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/a134216735e44e3ad6e87f528f5b3cca.jpg" alt="Spring JdbcTemplate入门">4、创建用户数据访问接口</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230110/a39db234c3a7984b1133cd44d50829d0.jpg" alt="Spring JdbcTemplate入门">5、创建用户数据访问接口实现类<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/d9a74acf771a8e5d34a279099bb0dd22.jpg" alt="Spring JdbcTemplate入门">6、创建用户服务类<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/af08f6fd431a30672ddbbefe21df1859.jpg" alt="Spring JdbcTemplate入门">7、创建数据库配置属性文件（连接名和密码需修改为自己的）<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/361ba841188af37e3df5b8c226112b05.jpg" alt="Spring JdbcTemplate入门">8、创建spring配置文件<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/1213b644968cf9ec7effc9d6572d8270.jpg" alt="Spring JdbcTemplate入门">9、创建测试通过编号查询用户方法<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/085b8cda67663f6b61daa8028dc88b45.jpg" alt="Spring JdbcTemplate入门">10、运行代码，实现功能<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/cce35de6610f4968f01b4803bcb58dae.jpg" alt="Spring JdbcTemplate入门">查询数据成功，这里报红的原因是MySQL在高版本需要指明是否进行SSL连接：<br /> 11、测试查询全部用户方法<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/7c49bff797d0e5edd511eeaa7bd02136.jpg" alt="Spring JdbcTemplate入门"><img decoding="async" src="http://img.555519.xyz/uploads/20230110/84a18fea3f91d424c7806d41ae6d6ba9.jpg" alt="Spring JdbcTemplate入门">12、测试用户登录方法<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/d09ea5b9873b1645ed1bb0833b96b967.jpg" alt="Spring JdbcTemplate入门">还有其他的测试方法，我们可以去尝试，这会让我们受益匪浅。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-87429.htm">正规领养宠物流程商家会打电话吗（正规领养宠物流程商家会打电话吗）</a></p>
+                                        <p>下一个：<a href="/news/article-88165.htm">mysql5.7自动创建分区</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-clash-node.htm" title="3月30日最新V2rayC订阅 | 18.8M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享">3月30日最新V2rayC订阅 | 18.8M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-76909.htm" title="小动物医生故事（小动物医生故事内容）">小动物医生故事（小动物医生故事内容）</a></li>
+                        <li class="py-2"><a href="/news/article-67031.htm" title="Java实现最小高度树_java">Java实现最小高度树_java</a></li>
+                        <li class="py-2"><a href="/news/article-81039.htm" title="TS内置类型与拓展_在线工具">TS内置类型与拓展_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-71562.htm" title="动物疫病防控中心可以打疫苗吗 动物疫病防控中心可以打疫苗吗多少钱">动物疫病防控中心可以打疫苗吗 动物疫病防控中心可以打疫苗吗多少钱</a></li>
+                        <li class="py-2"><a href="/news/article-73546.htm" title="天津宠物领养机构排名（天津有宠物领养中心吗）">天津宠物领养机构排名（天津有宠物领养中心吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-clash.htm" title="3月23日最新V2rayC订阅 | 19.3M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享">3月23日最新V2rayC订阅 | 19.3M/S|2025年SSR/Shadowrocket/Clash/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-subscribe-node.htm" title="3月18日最新V2rayC订阅 | 20.4M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享">3月18日最新V2rayC订阅 | 20.4M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-68296.htm" title="开宠物店需要干什么（开宠物店需要准备什么?）">开宠物店需要干什么（开宠物店需要准备什么?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-29-clash-node-github.htm" title="3月29日最新V2rayC订阅 | 21.9M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点地址链接分享">3月29日最新V2rayC订阅 | 21.9M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
