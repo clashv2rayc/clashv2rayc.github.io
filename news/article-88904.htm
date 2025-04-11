@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-88904.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>maven生成war包的两种方式</title>
+        <meta name="description" content="&nbsp;&nbsp;&nbsp; war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-88904.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="maven生成war包的两种方式" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/1f9e6d4bd526f1aa36b4f638e4d5bbb2.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:18:12" />
+    <meta property="og:updated_time" content="2025-04-05T08:18:12" />
+        <meta property="og:description" content="&nbsp;&nbsp;&nbsp; war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="maven生成war包的两种方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">maven生成war包的两种方式</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp;&nbsp;&nbsp; war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就支持此功能。下面主要介绍通过maven来操作的两种方式：</p> <p><strong>方法一：</strong></p> <p>&nbsp;&nbsp; 即第一反应的那种啦，就是利用maven的maven-war-plugin。</p> <pre class="xml">&lt;build&gt;    &lt;plugins&gt;    ......     &lt;plugin&gt;        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;        &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;        &lt;version&gt;2.0.2&lt;/version&gt;        &lt;configuration&gt;           &lt;warSourceExcludes&gt;WEB-INF/lib/log4j-${log4j.version}.jar&lt;/warSourceExcludes&gt;        &lt;/configuration&gt;     &lt;/plugin&gt;    &lt;/plugins&gt;  &lt;/build&gt;</pre> <p>当然你可以指定war包的名称，输出的目录，webapp目录等等。</p> <p>可以在需要打包的工程中直接设定：&lt;pom&gt;war&lt;/pom&gt;</p> <p>这样在install的时候就会对此工程生成相应配置的war包，原来此web工程依赖的其他工程全部会以jar包的形式出现在lib目录下，所以不需要再去关心war包中集成的jar包是否完整，maven已经帮你做完了。</p> <p>顺便提一句，在jboss中发布war包，如果包中包含log4j.jar，会报错，所以在本例中将此jar包排除在外。</p> <p><strong>方法二：</strong></p> <p>不用war插件，而是用到另外三个插件：maven-dependency-plugin 、maven-antrun-plugin&nbsp;、 build-helper-maven-plugin</p> <p>下面分别说明下着三个插件在此过程扮演的角色：</p> <p>maven-dependency-plugin ：相当于数据收集器，该依赖那些jar包，该加载那些resource信息。</p> <p>maven-antrun-plugin：完成收集完文件夹的压缩和包的重命名。</p> <p>build-helper-maven-plugin：让压缩包拥有男人本色，oh sorry 是war本色。</p> <p>在写pom.xml配置前，先说明下目录结构</p> <p>root</p> <p>|</p> <p>|---template</p> <p>|</p> <p>|---wardir</p> <p>其中这两个目录都作为maven的独立工程，下面要写配置在wardir下的pom.xml中</p> <pre class="xml">&lt;build&gt;    &lt;plugins&gt;       &lt;plugin&gt;         &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;         &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;         &lt;version&gt;2.0&lt;/version&gt;         &lt;executions&gt;            &lt;execution&gt;               &lt;id&gt;create-structure&lt;/id&gt;               &lt;phase&gt;process-resources&lt;/phase&gt;                &lt;goals&gt;                    &lt;goal&gt;unpack&lt;/goal&gt;                 &lt;/goals&gt;                 &lt;configuration&gt;                     &lt;artifactItems&gt;                        &lt;artifactItem&gt;                           &lt;groupId&gt;GROUPID&lt;/groupId&gt;                            &lt;artifactId&gt;template&lt;/artifactId&gt;                        &lt;/artifactItem&gt;                  &lt;/artifactItems&gt;                  &lt;outputDirectory&gt;                      ${project.build.directory}/${assembly.name}.war                   &lt;/outputDirectory&gt;                 &lt;/configuration&gt;              &lt;/execution&gt;              &lt;execution&gt;                  &lt;id&gt;copy-libs&lt;/id&gt;                   &lt;phase&gt;process-resources&lt;/phase&gt;                    &lt;goals&gt;                       &lt;goal&gt;copy&lt;/goal&gt;                    &lt;/goals&gt;                    &lt;configuration&gt;                       &lt;artifactItems&gt;                          &lt;artifactItem&gt;                              &lt;groupId&gt;jdom&lt;/groupId&gt;                               &lt;artifactId&gt;jdom&lt;/artifactId&gt;                           &lt;/artifactItem&gt;                                 ......                        &lt;/artifactItems&gt;                          &lt;outputDirectory&gt;${project.build.directory}/${assembly.name}.war/WEB-INF/lib&lt;/outputDirectory&gt;                     &lt;/configuration&gt;                  &lt;/execution&gt;             &lt;/executions&gt;        &lt;/plugin&gt;         &lt;plugin&gt;             &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;             &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;             &lt;version&gt;1.3&lt;/version&gt;             &lt;executions&gt;                &lt;execution&gt;                   &lt;id&gt;copy-config&lt;/id&gt;                   &lt;phase&gt;process-resources&lt;/phase&gt;                   &lt;goals&gt;                       &lt;goal&gt;run&lt;/goal&gt;                    &lt;/goals&gt;                    &lt;configuration&gt;                    &lt;tasks&gt;                        &lt;copy todir="${project.build.directory}/${assembly.name}.war"&gt;                            &lt;fileset dir="src/main/resources" /&gt;                        &lt;/copy&gt;                        &lt;zip destfile="${project.build.directory}/${assembly.name}-${project.version}-war.zip"&gt;                             &lt;zipfileset dir="${project.build.directory}/${assembly.name}.war" includes="**\*.*"  excludes="*.zip" /&gt;                        &lt;/zip&gt;                        &lt;copy file="${project.build.directory}/${assembly.name}-${project.version}-war.zip"                                     tofile="${project.build.directory}/${assembly.name}-${project.version}.war" /&gt;                      &lt;/tasks&gt;                      &lt;/configuration&gt;                 &lt;/execution&gt;             &lt;/executions&gt;        &lt;/plugin&gt;        &lt;plugin&gt;            &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;            &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;            &lt;version&gt;1.4&lt;/version&gt;            &lt;executions&gt;               &lt;execution&gt;               &lt;id&gt;attach-artifacts&lt;/id&gt;               &lt;phase&gt;package&lt;/phase&gt;                  &lt;goals&gt;                      &lt;goal&gt;attach-artifact&lt;/goal&gt;                  &lt;/goals&gt;                  &lt;configuration&gt;                       &lt;artifacts&gt;                          &lt;artifact&gt;                              &lt;file&gt;${project.build.directory}/${assembly.name}-${project.version}.war&lt;/file&gt;                               &lt;type&gt;war&lt;/type&gt;                           &lt;/artifact&gt;                        &lt;/artifacts&gt;                   &lt;/configuration&gt;                &lt;/execution&gt;             &lt;/executions&gt;          &lt;/plugin&gt;     &lt;/plugins&gt; &lt;/build&gt;</pre> <p>&nbsp;当然这种方式也可以用来打ear包。对于打无页面操作系统的war包，个人认为用后者更灵活，当然建立假web工程，再依赖工程，通过第一种方式同样可以达到最终的结果。看个人喜好了。</p> <p>结束语：maven真的很强大！</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88903.htm">vue elementui点击按钮新增输入框</a></p>
+                                        <p>下一个：<a href="/news/article-89615.htm">python数据可视化-matplotlib入门条形图和直方图</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-85998.htm" title="python实现tcp/ip通信">python实现tcp/ip通信</a></li>
+                        <li class="py-2"><a href="/news/article-66391.htm" title="兽医疫苗批号怎么查（兽医疫苗批号怎么查询）">兽医疫苗批号怎么查（兽医疫苗批号怎么查询）</a></li>
+                        <li class="py-2"><a href="/news/article-83848.htm" title="猫咪三针疫苗多少钱一只猫用（宠物猫三针疫苗多少钱）">猫咪三针疫苗多少钱一只猫用（宠物猫三针疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-clash-v2ray-ss-ssr.htm" title="3月27日最新V2rayC订阅 | 20.5M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">3月27日最新V2rayC订阅 | 20.5M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-76242.htm" title="2021年国考公务员报名官网（2021年国考公务员报名官网登录）">2021年国考公务员报名官网（2021年国考公务员报名官网登录）</a></li>
+                        <li class="py-2"><a href="/news/article-83156.htm" title="SpringBoot项目@Scheduled读取动态参数">SpringBoot项目@Scheduled读取动态参数</a></li>
+                        <li class="py-2"><a href="/news/article-78972.htm" title="考兽医资格证有用吗（考兽医资格证有用吗知乎）">考兽医资格证有用吗（考兽医资格证有用吗知乎）</a></li>
+                        <li class="py-2"><a href="/news/article-87428.htm" title="动物疫苗管理法律法规最新文件是什么内容（动物疫苗管理法律法规最新文件是什么内容啊）">动物疫苗管理法律法规最新文件是什么内容（动物疫苗管理法律法规最新文件是什么内容啊）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-node-subscribe-links.htm" title="3月20日最新V2rayC订阅 | 19.9M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享">3月20日最新V2rayC订阅 | 19.9M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-29-clash-node-github.htm" title="3月29日最新V2rayC订阅 | 21.9M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点地址链接分享">3月29日最新V2rayC订阅 | 21.9M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
