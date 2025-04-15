@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-95572.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>在Git中进行忽略文件操作详解_在线工具</title>
+        <meta name="description" content="目录  1、忽略文件说明 2、忽略文件的原则 3、.gitignore忽略规则  4、忽略文件的三种方式  （1）忽略单个仓库中的文件（远程共用） （2）忽略单个仓库中的文件（本地使用） （3）全局忽" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-95572.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="在Git中进行忽略文件操作详解_在线工具" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250116/7519d31600394dcd385a53e58c446574.webp" />
+        <meta property="og:release_date" content="2025-04-14T08:02:41" />
+    <meta property="og:updated_time" content="2025-04-14T08:02:41" />
+        <meta property="og:description" content="目录  1、忽略文件说明 2、忽略文件的原则 3、.gitignore忽略规则  4、忽略文件的三种方式  （1）忽略单个仓库中的文件（远程共用） （2）忽略单个仓库中的文件（本地使用） （3）全局忽" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="在Git中进行忽略文件操作详解_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">在Git中进行忽略文件操作详解_在线工具</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				</p> <div class="toc"> <div class="toc-container-header">目录</div> <ul> <li><a href="#1%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"  rel="nofollow">1、忽略文件说明</a></li> <li><a href="#2%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99"  rel="nofollow">2、忽略文件的原则</a></li> <li><a href="#3gitignore%E5%BF%BD%E7%95%A5%E8%A7%84%E5%88%99"  rel="nofollow">3、<code>.gitignore</code>忽略规则</a></li> <li> <a href="#4%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"  rel="nofollow">4、忽略文件的三种方式</a></p> <ul> <li><a href="#1%E5%BF%BD%E7%95%A5%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E8%BF%9C%E7%A8%8B%E5%85%B1%E7%94%A8"  rel="nofollow">（1）忽略单个仓库中的文件（远程共用）</a></li> <li><a href="#2%E5%BF%BD%E7%95%A5%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E6%9C%AC%E5%9C%B0%E4%BD%BF%E7%94%A8"  rel="nofollow">（2）忽略单个仓库中的文件（本地使用）</a></li> <li><a href="#3%E5%85%A8%E5%B1%80%E5%BF%BD%E7%95%A5"  rel="nofollow">（3）全局忽略</a></li> </ul> </li> </ul> </div> <h2 id="1忽略文件说明">1、忽略文件说明</h2> <p>有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们到本地版本库，通常都是些自动生成的文件、日志文件、系统缓存文件、编译过程中创建的临时文件，或者保存了数据库密码的配置文件、人隐私文件等等，每次执行<code>git status</code>命令时，都会显示<code>Untracked files ...（未被跟踪）</code>，有强迫症的童鞋心里肯定不爽。</p> <p>正常来说，这些文件都是不应该被提交到版本库，倘若一不留神提交到版本库，要么泄露机密信息，要么造成经济损失，要么对团队其他人工作造成不便。</p> <p>好在Git考虑到了大家的感受，这个问题解决起来也很简单，在Git工作区的根目录下创建一个特殊的<code>.gitignore</code>文件，然后把要忽略的文件名填进去，并且把<code>.gitignore</code>文件提交到本地版本库中。之后Git就会自动忽略这些文件，再运行<code>git  status</code>命令时就不对其进行检测了。</p> <blockquote> <p>即："并不是所有的牛奶都叫特仑苏"，在<strong>版本控制系统</strong>中也有相似的表达，那就是"并不是所有的文件都需要提交到本地版本库"。</p> </blockquote> <h2 id="2忽略文件的原则">2、忽略文件的原则</h2> <ol> <li>忽略操作系统自动生成的文件,保持项目在不同操作系统中的纯粹性和整洁度。</li> <li>忽略编译生成的中间文件、可执行文件等，比如Java编译产生的<code>.class</code>文件，<br /> 即：忽略工具软件自动生成的文件，避免因个性化配置而产生的工作障碍。</li> <li>忽略自己带有敏感信息的配置文件，比如存放口令的配置文件。</li> </ol> <blockquote> <p>目标：只提交必要文件，忽略无用文件，尽可能考虑多种情况，不给他人制造麻烦。</p> </blockquote> <h2 id="3gitignore忽略规则">3、<code>.gitignore</code>忽略规则</h2> <p><strong>文件 <code>.gitignore</code> 的格式规范如下：</strong></p> <ul> <li>所有空行或者以 <code>#</code> 开头的行都会被 Git 忽略。</li> <li>可以使用标准的<code>glob</code>模式匹配，它会递归地应用在整个工作区中。</li> <li>匹配模式可以以（<code>/</code>）开头，防止递归。</li> <li>匹配模式最后跟<code>/</code>说明要忽略的是目录。</li> <li>要忽略指定模式以外的文件或目录，可以在模式前加上叹号（<code>!</code>）取反。</li> </ul> <p><strong>所谓的<code>glob</code>模式是指<code>shell</code>所使用的简化了的正则表达式。</strong></p> <ul> <li>以＃开头的行用作注释。</li> <li>星号（<code>*</code>）匹配零个或多个任意字符。</li> <li> <code>[abc]</code>匹配任何一个列在方括号中的字符 （这个例子要么匹配一个<code>a</code>，要么匹配一个<code>b</code>，要么匹配一个 <code>c</code>）；</li> <li>问号（<code>?</code>）只匹配一个任意字符。</li> <li>如果在方括号中使用短划线分隔两个字符， 表示所有在这两个字符范围内的都可以匹配（比如 <code>[0-9]</code> 表示匹配所有 0 到 9 的数字）。</li> <li>使用两个星号（<code>**</code>）表示匹配任意中间目录，比如 <code>a/**/z</code> 可以匹配 <code>a/z</code> 、 <code>a/b/z</code> 或 <code>a/b/c/z</code> 等。</li> </ul> <p><strong>我们再看一个 <code>.gitignore</code> 文件的例子：</strong></p> <pre><code class="language-shell"># 1.忽略public下的所有目录及文件 /public/*  # 2.不忽略/public/assets，就是特例的意思，assets文件不忽略 !/public/assets  # 3.忽略具体的文件 index.html  # 4.忽略所有的java文件 *.java  # 5.忽略 a.java b.java [ab].java  # 6.忽略 doc/ 目录及其所有子目录下的 .pdf 文件 doc/**/*.pdf  # 7.忽略 doc/notes.txt，但不忽略 doc/server/arch.txt doc/*.txt  # 8.忽略任何目录下名为 build 的文件夹 build/  # 9.只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO文件 /TODO </code></pre> <blockquote> <p>提示：要养成一开始就为你的新仓库设置好<code>.gitignore</code>文件的习惯，以免将来误提交这类无用的文件。</p> </blockquote> <h2 id="4忽略文件的三种方式">4、忽略文件的三种方式</h2> <p>有鉴于此，我们应该寻求一种机制来规避这种事故的发生，在 <code>git</code> 版本控制系统中一般有三种不同的解决方案。</p> <p>最常用也是最简单的当属 <code>.gitignore</code> 文件。</p> <h3 id="1忽略单个仓库中的文件远程共用">（1）忽略单个仓库中的文件（远程共用）</h3> <p>该方式是在工作中最常用的方式，配置方法是在仓库的根目录下新建 <code>.gitignore</code> 文件，在文件里配置忽略规则，同时把 <code>.gitignore</code> 文件加入版本管理。之后可以同步该配置到远程仓库，其他开发者可更新该文件到本地仓库，与其他克隆仓库共享同一套忽略规则。</p> <p><code>.gitignore</code>文件对其所在的目录，及所在目录的全部子目录均有效。</p> <p><strong>1）查看当前Git工作目录中文件状态。</strong></p> <pre><code class="language-bash">L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         hello.java         local.txt         test.java         xyj-sha_hs.py         xyj-sun_wk.py         xyj-zhu_bj.py  nothing added to commit but untracked files present (use "git add" to track) </code></pre> <p>可以看到有6个未被追踪的文件。</p> <p><strong>2）在Git仓库的根目录下新建一个名为<code>.gitignore</code>的文件。</strong></p> <p>因为是点开头，没有文件名，没办法直接在Windows系统中直接创建，要通过Git Bash客户端，用Linux系统的方式新建<code>.gitignore</code>文件。</p> <pre><code class="language-bash"># 创建.gitignore文件。 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ touch .gitignore  # 查看本地版本库中是否成功创建.gitignore文件。 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ ll -a total 12 drwxr-xr-x 1 L 197121 0  4月 10 11:52 ./ drwxr-xr-x 1 L 197121 0  4月  2 21:54 ../ drwxr-xr-x 1 L 197121 0  4月 10 11:51 .git/ -rw-r--r-- 1 L 197121 0  4月 10 11:52 .gitignore -rw-r--r-- 1 L 197121 0  4月  4 10:37 hello.java -rw-r--r-- 1 L 197121 0  4月 10 11:46 local.txt -rw-r--r-- 1 L 197121 0  4月  4 01:20 test.java -rw-r--r-- 1 L 197121 0  4月  4 10:38 xyj-sha_hs.py -rw-r--r-- 1 L 197121 0  4月  4 10:38 xyj-sun_wk.py -rw-r--r-- 1 L 197121 0  4月  4 10:38 xyj-zhu_bj.py </code></pre> <p><strong>3）将需要忽略的文件写入<code>.gitignore</code>文件中。</strong></p> <p>提示：每个文件或者正则匹配占一行。</p> <pre><code class="language-bash"># 配置.gitignore文件内容 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ echo "xyj-*.py" &gt; .gitignore  # 查看.gitignore文件内容 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ cat .gitignore xyj-*.py  </code></pre> <p><strong>4）将<code>.gitignore</code>文件提交到本地版本库。</strong></p> <pre><code class="language-bash"># 1.查看当前Git工作目录中文件状态 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         .gitignore	# 文件名都为红色         hello.java         local.txt         test.java  nothing added to commit but untracked files present (use "git add" to track)  # 我们可以看到，xyj开头的文件已经被忽略掉了，但只是在本地起作用。  # 2.追踪.gitignore文件 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git add .gitignore  L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Changes to be committed:   (use "git restore --staged &lt;file&gt;..." to unstage)         new file:   .gitignore	# 文件名为绿色  Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         hello.java	# 文件名都为红色         local.txt         test.java  # 3.提交.gitignore文件到本地版本库 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git commit -m 'create ignore file' [master d3ceba8] create ignore file  1 file changed, 1 insertion(+)  create mode 100644 .gitignore  L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         hello.java	# 文件名都为红色         local.txt         test.java </code></pre> <p>这样就完成可忽略文件的整个过程了。</p> <h3 id="2忽略单个仓库中的文件本地使用">（2）忽略单个仓库中的文件（本地使用）</h3> <p>用这种方式配置忽略文件，不会同步该设置至远程仓库，只在本机起作用。</p> <p>配置方法是直接编辑Git仓库根目录下的<code>.git/info/exclude</code>文件，把要忽略的规则直接写入，这个方法只在本机当前仓库起效，不会对其他的克隆仓库起效。</p> <p><strong>1）查看当前Git工作目录中文件状态。</strong></p> <pre><code class="language-bash">L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         hello.java	# 文件名都为红色         local.txt         test.java  nothing added to commit but untracked files present (use "git add" to track) </code></pre> <p>可以看到有3个未被追踪的文件。</p> <p><strong>2）编辑Git仓库根目录下的<code>.git/info/exclude</code>文件，配置忽略。</strong></p> <pre><code class="language-bash"># 1.我们先来查看一下.git/info/exclude文件的默认内容 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ cat .git/info/exclude # git ls-files --others --exclude-from=.git/info/exclude # Lines that start with '#' are comments. # For a project mostly in C, the following would be a good set of # exclude patterns (uncomment them if you want to use them): # *.[oa] # *~  # 2.配置忽略文件，把local.txt文件进行忽略 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ echo "local.txt" &gt;&gt; .git/info/exclude  L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ cat .git/info/exclude # git ls-files --others --exclude-from=.git/info/exclude # Lines that start with '#' are comments. # For a project mostly in C, the following would be a good set of # exclude patterns (uncomment them if you want to use them): # *.[oa] # *~ local.txt </code></pre> <p><strong>3）再次查看当前Git工作目录中文件状态。</strong></p> <pre><code class="language-bash">L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         hello.java         test.java  nothing added to commit but untracked files present (use "git add" to track) </code></pre> <p>我们可以看到<code>local.txt</code>文件被忽略了。</p> <h3 id="3全局忽略">（3）全局忽略</h3> <p>忽略规则由本机所有仓库共用（也就是对本机的所有Git仓库都起作用），配置方法如下：</p> <p><strong>Linux中，这时把全局要忽略的文件列表<code>.gitignore</code>放当前用户根目录下（ <code>~/.gitconfig</code> ）：</strong></p> <pre><code>git config --global core.excludesfile '~/.gitignore' </code></pre> <p><strong>Windows中，这时把全局要忽略的文件列表<code>.gitignore</code>放当前用户根目录下：</strong></p> <pre><code>git config --global core.excludesfile "%USERPROFILE%\.gitignore（可自定义）" </code></pre> <p>我们以Windows系统为例：</p> <p><strong>1）查看当前Git工作目录中文件状态。</strong></p> <pre><code class="language-bash">L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master Untracked files:   (use "git add &lt;file&gt;..." to include in what will be committed)         hello.java         test.java </code></pre> <p><strong>2）创建<code>.gitignore</code>忽略文件。</strong></p> <p>我们可以复制用户根目录下的<code>.gitconfig</code>文件，并改名为<code>.gitignore</code>文件。</p> <p>注意：</p> <ul> <li> <code>.gitconfig</code>文件可以改成其他名称，如<code>.gitignore_global</code>，这样好区分工作目录中的<code>.gitignore</code>忽略文件。</li> <li> <code>.gitconfig</code>文件也可以使用<code>.txt</code>格式的文本文件代替，例如<code>gitignore_global.txt</code> </li> </ul> <p>如下：</p> <pre><code class="language-bash"># 复制文件，生成gitignore_global.txt文件 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ cp /c/Users/L/.gitconfig /c/Users/L/gitignore_global.txt  # 查看gitignore_global.txt文件是否生成 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ ll /c/Users/L/.git* -rw-r--r-- 1 L 197121 90  4月  5 20:52 /c/Users/L/.gitconfig -rw-r--r-- 1 L 197121 90  4月  5 20:59 /c/Users/L/gitignore_global.txt  # 清空gitignore_global.txt文件中的内容 L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ echo "" &gt; /c/Users/L/gitignore_global.txt </code></pre> <p><strong>3）将忽略文件配置到Git全局配置文件<code>.gitconfig</code>文件中。</strong></p> <p>通过如下命令进行配置。</p> <pre><code class="language-bash">git config --global core.excludesfile /c/Users/L/gitignore_global.txt </code></pre> <p>执行命令后，查看<code>.gitconfig</code>文件内容，如下：</p> <pre><code class="language-bash">[user] 	name = sun_wk 	email = sun_wk@126.com # 下面两行是生成的 [core] 	excludesfile = C:/Users/L/gitignore_global.txt </code></pre> <blockquote> <p>提示：如果之前配置<code>global</code>级别的配置签名，<code>.gitconfig</code>文件就已经被创建。</p> </blockquote> <p>至此之后，所有Git仓库都会自动应用这个<code>gitignore_global.txt</code>文件中，所配置忽略的文件。</p> <blockquote> <p>当然本例子是存放于 当前用户的根目录下，你可以改成其他路径，但是不推荐。</p> </blockquote> <p><strong>4）把需要忽略的文件加入到<code>gitignore_global.txt</code>文件中。</strong></p> <p>把<code>gitignore_global.txt</code>文件中的内容清空，之后添加要忽略的文件。</p> <p><code>gitignore_global.txt</code>文件内容如下：</p> <pre><code class="language-bash"># 忽略所有.java文件，也可以单个文件写 *.java </code></pre> <p><strong>5）查看<code>learngit</code>仓库工作目录文件状态。</strong></p> <pre><code class="language-bash">L@DESKTOP-T2AI2SU MINGW64 /j/git-repository/learngit (master) $ git status On branch master nothing to commit, working tree clean </code></pre> <p>可以看到<code>hello.java</code>和<code>test.java</code>两个未被追踪的文件被忽略掉了。</p> <blockquote> <p>提示：其实可以直接将<code>gitignore_global.txt</code>文件中的内容直接写到<code>.gitconfig</code>文件中，效果也一样的。只不过这样会比较混乱一点，还是推荐上面详细叙述的方法来设置Git全局忽略文件。</p> </blockquote> <blockquote> <p>参考：</p> <ul> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208"  target="_blank"  rel="nofollow">https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://zhuanlan.zhihu.com/p/60752662"  target="_blank"  rel="nofollow">https://zhuanlan.zhihu.com/p/60752662</a></li> </ul> </blockquote> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94835.htm">宠物店一年的利润多少正常（宠物店一个月盈利大概是多少）</a></p>
+                                        <p>下一个：<a href="/news/article-95573.htm">动物疫苗的种类及特点是什么呢英文（动物疫苗有哪几种）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-76908.htm" title="宠物疫苗批号查询网站（宠物疫苗批次查询）">宠物疫苗批号查询网站（宠物疫苗批次查询）</a></li>
+                        <li class="py-2"><a href="/news/article-66392.htm" title="宠物粮食品牌代理怎么做的 宠物粮食品牌代理怎么做的呢">宠物粮食品牌代理怎么做的 宠物粮食品牌代理怎么做的呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-node-share.htm" title="3月4日最新V2rayC订阅 | 20M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">3月4日最新V2rayC订阅 | 20M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-clash-node-github.htm" title="3月14日最新V2rayC订阅 | 22M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享">3月14日最新V2rayC订阅 | 22M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-67647.htm" title="广州宠物救助领养中心官网（广州宠物救助领养中心官网电话）">广州宠物救助领养中心官网（广州宠物救助领养中心官网电话）</a></li>
+                        <li class="py-2"><a href="/news/article-86721.htm" title="做猫粮的机器多少钱一台啊视频 做猫粮的机器多少钱一台啊视频教程">做猫粮的机器多少钱一台啊视频 做猫粮的机器多少钱一台啊视频教程</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-node-github.htm" title="3月7日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享">3月7日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket/SSR/V2ray/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-node-subscribe-links.htm" title="3月20日最新V2rayC订阅 | 19.9M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享">3月20日最新V2rayC订阅 | 19.9M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-93317.htm" title="医院动物实验中心干什么（医院动物实验室）">医院动物实验中心干什么（医院动物实验室）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-clash-node.htm" title="3月30日最新V2rayC订阅 | 18.8M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享">3月30日最新V2rayC订阅 | 18.8M/S|2025年Shadowrocket/V2ray/Clash/SSR免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
