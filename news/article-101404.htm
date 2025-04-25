@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayc.github.io/news/article-101404.htm" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Django项目引入NPM和gulp管理前端资源</title>
+        <meta name="description" content="前言 之前写了一篇《Asp-Net-Core开发笔记：使用NPM和gulp管理前端静态文件》，现在又来用Django开发项目了，之前我搞了一个Django的快速开发脚手架「DjangoStarter」" />
+        <link rel="icon" href="/assets/website/img/clashv2rayc/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashV2rayC免费订阅地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayc.github.io/news/article-101404.htm" />
+    <meta property="og:site_name" content="ClashV2rayC免费订阅地址中文网" />
+    <meta property="og:title" content="Django项目引入NPM和gulp管理前端资源" />
+    <meta property="og:image" content="https://clashv2rayc.github.io/uploads/20250129/29b1c23a21195a25858fc0261ad84329.webp" />
+        <meta property="og:release_date" content="2025-04-22T08:23:02" />
+    <meta property="og:updated_time" content="2025-04-22T08:23:02" />
+        <meta property="og:description" content="前言 之前写了一篇《Asp-Net-Core开发笔记：使用NPM和gulp管理前端静态文件》，现在又来用Django开发项目了，之前我搞了一个Django的快速开发脚手架「DjangoStarter」" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Django项目引入NPM和gulp管理前端资源">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <!-- Stylesheets -->
+    <link href="/assets/website/css/clashv2rayc/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2SVYDRGP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G2SVYDRGP7');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="page-wrapper">
+                <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader-inner">
+                <div class="spinner"></div>
+                <div class="loading-text">
+                    <span data-preloader-text="C" class="characters">C</span>
+                    <span data-preloader-text="L" class="characters">L</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="S" class="characters">S</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="V" class="characters">V</span>
+                    <span data-preloader-text="2" class="characters">2</span>
+                    <span data-preloader-text="R" class="characters">R</span>
+                    <span data-preloader-text="A" class="characters">A</span>
+                    <span data-preloader-text="Y" class="characters">Y</span>
+                    <span data-preloader-text="C" class="characters">C</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <header class="main-header two">
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="container">
+                    <div class="inner-container d-flex justify-content-between align-items-center">
+                        <div class="logo-box">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="navbar-brand xcblog-blog-logo" href="/">
+                                                                        <span>Clash V2rayC</span>
+                                                                    </a>
+                            </div>
+                        </div>
+                        <div class="nav-outer d-flex align-items-center">
+                            <!-- Main Menu -->
+                            <nav class="main-menu d-none d-lg-block">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Lower -->
+        </header>
+        <!-- End Main Header -->
+        <!-- End Main Header -->
+        <!-- Page Header Section -->
+        <div class="page_header">
+            <div class="page_header_content">
+                <div class="container">
+                    <h1 class="heading">Django项目引入NPM和gulp管理前端资源</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active">正文</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Section -->
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<h2 id="前言">前言</h2> <p>之前写了一篇《Asp-Net-Core开发笔记：使用NPM和gulp管理前端静态文件》，现在又来用Django开发项目了，之前我搞了一个Django的快速开发脚手架「DjangoStarter」，正好给升级一下~</p> <p>关于npm和gulp我就不多重复了，之前那篇文章都写了，直接上操作</p> <h2 id="安装依赖">安装依赖</h2> <p>安装依赖的操作跟上一篇文章是一样的，不过我这里直接提供<code>package.json</code>文件，复制到项目根目录里面，然后直接执行命令安装依赖。</p> <p><code>package.json</code>文件如下：</p> <pre><code class="language-json">{   "name": "django_starter",   "version": "1.0.0",   "description": "",   "main": "index.js",   "repository": "https://github.com/Deali-Axy/DjangoStarter",   "author": "DealiAxy",   "license": "Apache License 2.0",   "dependencies": {     "bootstrap": "^5.1.3",   },   "devDependencies": {     "gulp": "^4.0.2",     "gulp-changed": "^4.0.3",     "gulp-clean-css": "^4.3.0",     "gulp-concat": "^2.6.1",     "gulp-rename": "^2.0.0",     "gulp-uglify": "^3.0.2",     "rimraf": "^3.0.2"   } }</code></pre> <p>执行命令：</p> <pre><code class="language-bash">npm install # 或者有安装yarn的话可以 yarn</code></pre> <h2 id="gulp配置">gulp配置</h2> <p>在项目根目录下创建<code>gulpfile.js</code>文件</p> <p>直接上配置文件：</p> <pre><code class="language-js">/// &lt;binding BeforeBuild='min' Clean='clean' ProjectOpened='auto' /&gt; "use strict";  //加载使用到的 gulp 插件 const gulp = require("gulp"),     rimraf = require("rimraf"),     concat = require("gulp-concat"),     cssmin = require("gulp-clean-css"),     rename = require("gulp-rename"),     uglify = require("gulp-uglify"),     changed = require("gulp-changed");   //定义 static 下的各文件存放路径 const paths = {     root: "./static/",     css: './static/css/',     js: './static/js/',     lib: './static/lib/' };  //css paths.cssDist = paths.css + "**/*.css";//匹配所有 css 的文件所在路径 paths.minCssDist = paths.css + "**/*.min.css";//匹配所有 css 对应压缩后的文件所在路径 paths.concatCssDist = paths.css + "app.min.css";//将所有的 css 压缩到一个 css 文件后的路径  //js paths.jsDist = paths.js + "**/*.js";//匹配所有 js 的文件所在路径 paths.minJsDist = paths.js + "**/*.min.js";//匹配所有 js 对应压缩后的文件所在路径 paths.concatJsDist = paths.js + "app.min.js";//将所有的 js 压缩到一个 js 文件后的路径   //使用 npm 下载的前端组件包 const libs = [     {name: "bootstrap", dist: "./node_modules/bootstrap/dist/**/*.*"}, ];  // 使用 npm 下载的前端组件，自定义存放位置 const customLibs = [     // {name: 'font-awesome', dist: './node_modules/@fortawesome/fontawesome-free/**/*.*'}, ]  //清除压缩后的文件 gulp.task("clean:css", done =&gt; rimraf(paths.minCssDist, done)); gulp.task("clean:js", done =&gt; rimraf(paths.minJsDist, done));  gulp.task("clean", gulp.series(["clean:js", "clean:css"]));  //移动 npm 下载的前端组件包到 wwwroot 路径下 gulp.task("move:dist", done =&gt; {     libs.forEach(item =&gt; {         gulp.src(item.dist)             .pipe(gulp.dest(paths.lib + item.name + "/dist"));     });     done() }) gulp.task("move:custom", done =&gt; {     customLibs.forEach(item =&gt; {         gulp.src(item.dist)             .pipe(gulp.dest(paths.lib + item.name))     })     done() })  //每一个 css 文件压缩到对应的 min.css gulp.task("min:css", () =&gt; {     return gulp.src([paths.cssDist, "!" + paths.minCssDist], {base: "."})         .pipe(rename({suffix: '.min'}))         .pipe(changed('.'))         .pipe(cssmin())         .pipe(gulp.dest('.')); });  //将所有的 css 文件合并打包压缩到 app.min.css 中 gulp.task("concat:css", () =&gt; {     return gulp.src([paths.cssDist, "!" + paths.minCssDist], {base: "."})         .pipe(concat(paths.concatCssDist))         .pipe(changed('.'))         .pipe(cssmin())         .pipe(gulp.dest(".")); });  //每一个 js 文件压缩到对应的 min.js gulp.task("min:js", () =&gt; {     return gulp.src([paths.jsDist, "!" + paths.minJsDist], {base: "."})         .pipe(rename({suffix: '.min'}))         .pipe(changed('.'))         .pipe(uglify())         .pipe(gulp.dest('.')); });  //将所有的 js 文件合并打包压缩到 app.min.js 中 gulp.task("concat:js", () =&gt; {     return gulp.src([paths.jsDist, "!" + paths.minJsDist], {base: "."})         .pipe(concat(paths.concatJsDist))         .pipe(changed('.'))         .pipe(uglify())         .pipe(gulp.dest(".")); });   gulp.task('move', gulp.series(['move:dist', 'move:custom'])) gulp.task("min", gulp.series(["min:js", "min:css"])) gulp.task("concat", gulp.series(["concat:js", "concat:css"]))   //监听文件变化后自动执行 gulp.task("auto", () =&gt; {     gulp.watch(paths.css, gulp.series(["min:css", "concat:css"]));     gulp.watch(paths.js, gulp.series(["min:js", "concat:js"])); });</code></pre> <p>无脑复制粘贴就行，真正使用的时候，只需要关注这两段代码</p> <pre><code class="language-js">//使用 npm 下载的前端组件包 const libs = [     {name: "bootstrap", dist: "./node_modules/bootstrap/dist/**/*.*"}, ];  // 使用 npm 下载的前端组件，自定义存放位置 const customLibs = [     // {name: 'font-awesome', dist: './node_modules/@fortawesome/fontawesome-free/**/*.*'}, ]</code></pre> <p>第一段是针对比较规范的npm包，资源文件都在<code>dist</code>目录下的，配置规则就比较简单，原样复制到我们项目的<code>/static/lib</code>目录下就行。（一般比较新的npm包都是这种结构）</p> <p>第二段是针对不按规范的npm包，按照习惯，我们把它包下的css和js文件分开放到<code>/static/lib</code>目录下，当然具体怎么放可以自己决定，这些规则配置很自由的。</p> <p>举个例子：</p> <pre><code class="language-js">const customLibs = [     {name: 'example-lib/css', dist: './node_modules/example-lib/a/b/*.css'},     {name: 'example-lib/js', dist: './node_modules/example-lib/a/c/*.js'}, ]</code></pre> <p>这样就可以把<code>example-lib</code>包里面，<code>a/b</code>目录下的css文件，和<code>a/c</code>目录下的js文件，分别复制到我们项目目录的<code>/static/lib/example-lib/css</code>和<code>/static/lib/example-lib/js</code>目录，到时我们项目中引用会比较方便。</p> <h2 id="执行gulp任务">执行gulp任务</h2> <p>配置完了之后，直接执行这个命令就行：</p> <pre><code class="language-bash">gulp move</code></pre> <p>之前的gulp配置里还配了很多其他任务，不过感觉必要性不大，毕竟我们这是后端项目，只用一个move命令就行了</p> <p>关于其他的命令可以看上一篇有具体讲到。</p> <h2 id="在项目中引用">在项目中引用</h2> <p>这部分其实不在本文范畴，不过既然提到就写一下吧。</p> <p>在模板文件中，首先加载<code>static</code>标签，在模板代码的开头写上：</p> <pre><code class="language-jinja2">{% load static %}</code></pre> <p>然后需要引用静态文件的地方：</p> <pre><code class="language-jinja2">&lt;link ref="stylesheet" href="{% static 'lib/bootstrap/dist/css/bootstrap.css' %}"&gt;</code></pre> <p>因为我们之前配置gulp的时候，把所有npm包都复制到了<code>/static/lib</code>目录下，所以引用的时候是<code>lib/</code>开头。</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-101402.htm">点击轮播图片左右button，实现轮播效果</a></p>
+                                        <p>下一个：<a href="/news/article-102197.htm">宠物食品加工厂手续流程 宠物食品加工厂手续流程图</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-free-subscribe-node.htm" title="3月16日最新V2rayC订阅 | 20.1M/S|2025年SSR/V2ray/Clash/Shadowrocket免费节点地址链接分享">3月16日最新V2rayC订阅 | 20.1M/S|2025年SSR/V2ray/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-95572.htm" title="在Git中进行忽略文件操作详解_在线工具">在Git中进行忽略文件操作详解_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-73547.htm" title="让猫挠了轻微出血多久打针（让猫挠了轻微出血多久打针有效）">让猫挠了轻微出血多久打针（让猫挠了轻微出血多久打针有效）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-8-free-ssr-subscribe.htm" title="4月8日最新V2rayC订阅 | 20.8M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享">4月8日最新V2rayC订阅 | 20.8M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-85997.htm" title="解决Mysql不在电脑服务列表中的问题">解决Mysql不在电脑服务列表中的问题</a></li>
+                        <li class="py-2"><a href="/news/article-71562.htm" title="动物疫病防控中心可以打疫苗吗 动物疫病防控中心可以打疫苗吗多少钱">动物疫病防控中心可以打疫苗吗 动物疫病防控中心可以打疫苗吗多少钱</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-16-clash-node-github.htm" title="4月16日最新V2rayC订阅 | 20.5M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享">4月16日最新V2rayC订阅 | 20.5M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-81720.htm" title="人用疫苗和兽用疫苗区别 人用疫苗和兽用疫苗区别在哪">人用疫苗和兽用疫苗区别 人用疫苗和兽用疫苗区别在哪</a></li>
+                        <li class="py-2"><a href="/news/article-78971.htm" title="2022公务员国考报名人数统计查询（2021公务员国考报名人数统计）">2022公务员国考报名人数统计查询（2021公务员国考报名人数统计）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-clash-v2ray-ss-ssr.htm" title="3月21日最新V2rayC订阅 | 18.6M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享">3月21日最新V2rayC订阅 | 18.6M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">73</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+                <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="left-box">
+                            <div class="copyright">
+                                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    <a href="/">ClashV2rayC免费订阅地址中文网</a> 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-box d-flex">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook-f"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ScrollToTop Start -->
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <!-- ScrollToTop End -->
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/ma5-menu.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/appear.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/tilt.jquery.min.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/owl.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/wow.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/odometer.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/clashv2rayc/script.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!--End pagewrapper-->
+</body>
+
+</html>
