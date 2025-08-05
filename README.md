@@ -1,4 +1,4 @@
-# 7月31日最新V2rayC订阅 | 20.3M/S|2025年SSR/V2ray/Clash/Shadowrocket免费节点地址链接分享  更新时间 2025-07-31 09:44:46
+# 8月5日最新V2rayC订阅 | 19.3M/S|2025年SSR/Clash/Shadowrocket/V2ray免费节点地址链接分享  更新时间 2025-08-05 08:50:37
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashv2rayc.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://clashv2rayc.github.io/uploads/2025/07/0-20250731.yaml
-- https://clashv2rayc.github.io/uploads/2025/07/1-20250731.yaml
-- https://clashv2rayc.github.io/uploads/2025/07/2-20250731.yaml
-- https://clashv2rayc.github.io/uploads/2025/07/3-20250731.yaml
-- https://clashv2rayc.github.io/uploads/2025/07/4-20250731.yaml
+- https://clashv2rayc.github.io/uploads/2025/08/0-20250805.yaml
+- https://clashv2rayc.github.io/uploads/2025/08/1-20250805.yaml
+- https://clashv2rayc.github.io/uploads/2025/08/2-20250805.yaml
+- https://clashv2rayc.github.io/uploads/2025/08/3-20250805.yaml
+- https://clashv2rayc.github.io/uploads/2025/08/4-20250805.yaml
 
 ### V2ray订阅链接
 
-- https://clashv2rayc.github.io/uploads/2025/07/0-20250731.txt
-- https://clashv2rayc.github.io/uploads/2025/07/1-20250731.txt
-- https://clashv2rayc.github.io/uploads/2025/07/2-20250731.txt
-- https://clashv2rayc.github.io/uploads/2025/07/3-20250731.txt
-- https://clashv2rayc.github.io/uploads/2025/07/4-20250731.txt
+- https://clashv2rayc.github.io/uploads/2025/08/0-20250805.txt
+- https://clashv2rayc.github.io/uploads/2025/08/1-20250805.txt
+- https://clashv2rayc.github.io/uploads/2025/08/2-20250805.txt
+- https://clashv2rayc.github.io/uploads/2025/08/3-20250805.txt
+- https://clashv2rayc.github.io/uploads/2025/08/4-20250805.txt
 
 ### Sing-box订阅链接
 
-- https://clashv2rayc.github.io/uploads/2025/07/20250731.json
+- https://clashv2rayc.github.io/uploads/2025/08/20250805.json
 
 ## 更多clash节点订阅 ：
 
