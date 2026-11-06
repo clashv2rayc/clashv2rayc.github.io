@@ -305,24 +305,9 @@ A5：是的，修改配置后需重启V2Ray服务以加载新配置。</p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 伪装域名如何选择以提升隐蔽性？</h5></div>
+    <div class="panel-heading"><h5>V2Ray QUIC 模式在高丢包网络中的优势？</h5></div>
     <div class="panel-body">
-        伪装域名应选择真实可访问网站并配备有效证书，这样 Trojan 流量可模拟正常 HTTPS 请求，降低被封锁和检测的风险，提高节点长期可用性和访问稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的分流规则可以按端口分配节点吗？</h5></div>
-    <div class="panel-body">
-        支持。用户可通过端口号匹配流量，将不同应用的流量分配到指定节点，实现精准分流。结合策略组使用，可优化访问速度和网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 支持 VLESS 吗？</h5></div>
-    <div class="panel-body">
-        Quantumult X 目前官方未原生支持 VLESS，但通过手动修改配置或第三方脚本可实现兼容。若主要使用 VLESS 协议，可考虑使用 Sing-box 或 Shadowrocket 作为替代。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray QUIC 模式适合高丢包网络吗？</h5></div>
-    <div class="panel-body">
-        QUIC 基于 UDP 协议，支持多路复用和零握手，能在高丢包和不稳定网络中减少延迟和丢包。适合视频、游戏和即时通讯等高频应用场景，提高稳定性和速度。<hr />    </div>
+        QUIC 基于 UDP 协议，支持多路复用和零握手，可减少延迟和丢包。适合视频、游戏和即时通讯等高丢包环境，保证访问稳定性和速度，提高整体体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 协议的动态端口功能是什么？</h5></div>
@@ -330,14 +315,19 @@ A5：是的，修改配置后需重启V2Ray服务以加载新配置。</p>
         VMess 支持动态端口（port hopping）功能，能在一定范围内自动变更通信端口。此机制可有效防止防火墙基于端口的封锁策略，提高节点长期稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray QUIC 模式适合高丢包网络吗？</h5></div>
+    <div class="panel-body">
+        QUIC 基于 UDP 协议，支持多路复用和零握手，能在高丢包和不稳定网络中减少延迟和丢包。适合视频、游戏和即时通讯等高频应用场景，提高稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 节点健康检测如何提升网络体验？</h5></div>
+    <div class="panel-body">
+        WinXray 会定期检测节点延迟和丢包率，并结合策略组自动切换到最优节点。避免高延迟或失效节点，提高网页浏览、视频播放和游戏连接的稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
     <div class="panel-body">
         用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray QUIC 模式在高丢包网络中的优势？</h5></div>
-    <div class="panel-body">
-        QUIC 基于 UDP 协议，支持多路复用和零握手，可减少延迟和丢包。适合视频、游戏和即时通讯等高丢包环境，保证访问稳定性和速度，提高整体体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名如何正确配置？</h5></div>
@@ -345,14 +335,24 @@ A5：是的，修改配置后需重启V2Ray服务以加载新配置。</p>
         伪装域名必须真实可访问且证书有效，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的分流规则可以按端口分配节点吗？</h5></div>
+    <div class="panel-body">
+        支持。用户可通过端口号匹配流量，将不同应用的流量分配到指定节点，实现精准分流。结合策略组使用，可优化访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 伪装域名如何选择以提升隐蔽性？</h5></div>
+    <div class="panel-body">
+        伪装域名应选择真实可访问网站并配备有效证书，这样 Trojan 流量可模拟正常 HTTPS 请求，降低被封锁和检测的风险，提高节点长期可用性和访问稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-Go 的端口不可达怎么办？</h5></div>
     <div class="panel-body">
         检查服务器防火墙是否开放对应端口，同时确认客户端和服务器端端口一致。还可以尝试更换节点或端口，确保 TLS 证书有效以保证连接成功。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 节点健康检测如何提升网络体验？</h5></div>
+    <div class="panel-heading"><h5>Quantumult X 支持 VLESS 吗？</h5></div>
     <div class="panel-body">
-        WinXray 会定期检测节点延迟和丢包率，并结合策略组自动切换到最优节点。避免高延迟或失效节点，提高网页浏览、视频播放和游戏连接的稳定性和速度。    </div>
+        Quantumult X 目前官方未原生支持 VLESS，但通过手动修改配置或第三方脚本可实现兼容。若主要使用 VLESS 协议，可考虑使用 Sing-box 或 Shadowrocket 作为替代。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -400,16 +400,16 @@ A5：是的，修改配置后需重启V2Ray服务以加载新配置。</p>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-node-subscribe.htm" title="9月2日最新V2rayC订阅 | 22.7M/S|2025年Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点免费节点地址链接分享">9月2日最新V2rayC订阅 | 22.7M/S|2025年Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-9-3.htm" title="9月3日最新V2rayC订阅 | 20.7M/S|2025年V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点免费节点地址链接分享">9月3日最新V2rayC订阅 | 20.7M/S|2025年V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-30-node-share.htm" title="9月30日最新V2rayC订阅 | 21.8M/S|2025年V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点地址链接分享">9月30日最新V2rayC订阅 | 21.8M/S|2025年V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-29.htm" title="9月29日最新V2rayC订阅 | 19.8M/S|2025年Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点免费节点地址链接分享">9月29日最新V2rayC订阅 | 19.8M/S|2025年Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点免费节点地址链接分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-windows-2026-9-11.htm" title="9月11日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点免费节点地址链接分享">9月11日最新V2rayC订阅 | 21.4M/S|2025年Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-12-free-shadowrocket-node.htm" title="9月12日最新V2rayC订阅 | 20.3M/S|2025年Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/V2ray节点免费节点地址链接分享">9月12日最新V2rayC订阅 | 20.3M/S|2025年Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/V2ray节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-21.htm" title="10月21日最新V2rayC订阅 | 18.2M/S|2025年Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点免费节点地址链接分享">10月21日最新V2rayC订阅 | 18.2M/S|2025年Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-10-17.htm" title="10月17日最新V2rayC订阅 | 21.9M/S|2025年V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点免费节点地址链接分享">10月17日最新V2rayC订阅 | 21.9M/S|2025年V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-shadowrocket-node.htm" title="9月14日最新V2rayC订阅 | 23M/S|2025年Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点免费节点地址链接分享">9月14日最新V2rayC订阅 | 23M/S|2025年Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点免费节点地址链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-shadowrocket-node.htm" title="9月4日最新V2rayC订阅 | 20.6M/S|2025年Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点免费节点地址链接分享">9月4日最新V2rayC订阅 | 20.6M/S|2025年Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-10-7.htm" title="10月7日最新V2rayC订阅 | 20.3M/S|2025年V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点地址链接分享">10月7日最新V2rayC订阅 | 20.3M/S|2025年V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-9.htm" title="9月9日最新V2rayC订阅 | 21.9M/S|2025年V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点免费节点地址链接分享">9月9日最新V2rayC订阅 | 21.9M/S|2025年V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点免费节点地址链接分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-25.htm" title="9月25日最新V2rayC订阅 | 20.5M/S|2025年Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点免费节点地址链接分享">9月25日最新V2rayC订阅 | 20.5M/S|2025年Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-16-free-node-subscribe.htm" title="10月16日最新V2rayC订阅 | 22.2M/S|2025年SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点免费节点地址链接分享">10月16日最新V2rayC订阅 | 22.2M/S|2025年SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-4-free-shadowrocket-node.htm" title="11月4日最新V2rayC订阅 | 22.4M/S|2025年SSR节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点免费节点地址链接分享">11月4日最新V2rayC订阅 | 22.4M/S|2025年SSR节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-22-free-shadowrocket-node.htm" title="10月22日最新V2rayC订阅 | 20.6M/S|2025年Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点免费节点地址链接分享">10月22日最新V2rayC订阅 | 20.6M/S|2025年Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-14-clash-node-daily-updates.htm" title="10月14日最新V2rayC订阅 | 23M/S|2025年Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点免费节点地址链接分享">10月14日最新V2rayC订阅 | 23M/S|2025年Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点免费节点地址链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-30-free-clash.htm" title="10月30日最新V2rayC订阅 | 21.7M/S|2025年Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点免费节点地址链接分享">10月30日最新V2rayC订阅 | 21.7M/S|2025年Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点免费节点地址链接分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -421,7 +421,10 @@ A5：是的，修改配置后需重启V2Ray服务以加载新配置。</p>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
